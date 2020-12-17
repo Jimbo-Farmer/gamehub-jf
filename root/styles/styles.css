@@ -1,3 +1,148 @@
-header {
-    background-color: blue;
+@font-face {
+    font-family: "ArialRounded";
+    src: url("Arial Rounded MT Std Bold.ttf") format("truetype");
+  }
+
+
+body {
+    margin: 0px;
 }
+
+
+/* Header----------------------------------------------------------*/
+
+header {
+    
+    background: rgb(0,0,0);
+    background: linear-gradient(22deg, rgba(0,0,0,1) 60%, rgba(113,247,252,1) 100%, rgba(113,247,252,1) 100%);
+    color: white;
+    font-family: "ArialRounded", Arial, Helvetica, sans-serif ;
+    text-transform: uppercase;
+    position: relative;
+    
+}
+
+header h1 {
+    padding-top: 40px;
+    font-size: 2.5em;
+    margin: 0;
+    margin-left: 20%;
+    text-shadow: 2px 2px 2px #87FBFF;
+}
+header h2 {
+    font-size: 1.8em;
+    margin: 0;
+    margin-left: 20%;
+    text-shadow: 1px 1px 1px #87FBFF;
+}
+
+nav {
+    clear: left;
+    text-align: center;
+    
+}
+nav ul {
+    padding-left: 0;
+    margin-left: -37px;         /*hacky fix to get nav bar to extend across entire viewport*/
+    margin-right: -37px;        /*hacky fix to get nav bar to extend across entire viewport*/
+    margin-bottom: 0;
+    
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+header li {
+    display: inline-block;
+    width: 19%;
+    margin-top: 20px;
+    font-size: 1.2em;
+    padding: 5px 0;
+    border-bottom: solid 3px white;
+    
+    
+}
+
+/* Make whole nav item clickable, not just text */
+header li a {
+    display: block;
+}
+
+
+.account-cart {
+    position: absolute;
+    right: 5%;
+    top: 40px;
+
+    
+}
+
+.account-cart a {
+    display: block;
+    text-align: right;
+    font-size: 0.8em;
+    padding: 5px 0;
+}
+
+.logo img {
+    width: 12%;
+    min-width: 100px;
+    height: auto;
+    float: left;
+    margin: 40px 0px 10px 0px;
+    position: relative;
+    left: 5%;
+}
+
+/* Add a box around nav item to show which page the user is on */
+.here {
+    border: solid 3px white;  
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: solid 3px rgb(205,55,80);  
+    background-color: rgb(205,55,80);
+}
+
+/* Add a border radius at the bottom to get full 'folder divider' effect */
+.right-of-here {
+    border: solid 3px white;
+    border-top: none;
+    border-right: none;
+    padding-left: 3px;
+    margin-left: -3.2px;
+    border-bottom-left-radius: 6px;
+}
+
+.left-of-here {
+    border: solid 3px white;
+    border-top: none;
+    border-left: none;
+    padding-right: 3px;
+    margin-right: -3.2px;
+    border-bottom-right-radius: 6px;
+
+}
+
+
+
+
+
+
+
+/*Main ---------------------------------------------------------------*/
+
+main {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 60%, rgba(205,55,80,1) 100%, rgba(205,55,80,1) 100%);
+}
+
+main p {
+    margin-top: 0;
+    color: white;
+}
+
+
+/* Help with linear gradient from https://cssgradient.io/ */
