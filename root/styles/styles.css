@@ -9,7 +9,8 @@ body {
 }
 
 
-/* Header------------------------------------------------------------------------------------------------------------*/
+/* Header---------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------*/
 header {
     
     background: rgb(0,0,0);
@@ -21,11 +22,7 @@ header {
     
 }
 
-.hamburger{
-    display: none;
-}
-
-/* Top Left Header*/
+/* Top Left Header - logo and titles*/
 .logo img {
     width: 12%;
     min-width: 100px;
@@ -51,7 +48,7 @@ header h2 {
 }
 
 
-/* Top Right Header*/
+/* Top Right Header - cart and account*/
 .top-right {
     display: block;
     position: absolute;
@@ -73,33 +70,33 @@ header h2 {
     padding-bottom: 5px;
 }
 
+/* Navbar  */
 
-/* Nav Bar */
-/* nav {
+nav {
     clear: left;
     text-align: center;
     
-} */
-/* nav ul {
+} 
+nav ul {
     padding-left: 0;
     padding-right: 0;
     margin-left: 0px;         
     margin-bottom: 0;
-}  */
+}  
 
 header a {
     color: white;
     text-decoration: none;      /*remove hyperlink look*/
 }
 
-/* header li {
+header li {
     display: inline-block;
     width: 19.9%;               /*leave room for border widths, therefore not 20%*/
-    /* margin-top: 20px;
+    margin-top: 20px;
     font-size: 1.5em;
     padding: 5px 0;
     border-bottom: solid 3px white;    
-} */
+} 
 
 /* Make whole nav item clickable, not just text */
 header li a {
@@ -107,8 +104,9 @@ header li a {
 }
 
 
+
 /* Add a box around nav item to show which page the user is on */
- /* .here {
+.here {
     border: solid 3px white;  
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
@@ -116,25 +114,32 @@ header li a {
     background-color: rgb(205,55,80); 
     margin-left: -3px;
     margin-right: -3px;
-} */
+} 
 
 /* Add a border radius at the bottom to get full 'folder divider' effect */
-/* .right-of-here {
+.right-of-here {
     border: solid 3px white;
     border-top: none;
     border-right: none;
     margin-left: 0px;
     border-bottom-left-radius: 6px;
-} */
+} 
 
-/* .left-of-here {
+.left-of-here {
     border: solid 3px white;
     border-top: none;
     border-left: none;
     padding-right: 3px;
     margin-right: -3px;
     border-bottom-right-radius: 6px;
-} */
+} 
+
+.hamburger{
+    display: none;
+}
+
+
+/* Slight size reduction for smaller screens --------------*/
 
 @media (min-width: 800px) and (max-width: 1000px){
     header h1 {
@@ -149,7 +154,11 @@ header li a {
     }
 }
 
+/* Further size reduction for smaller screens */
+
 @media (min-width: 600px) and (max-width: 800px){
+    
+
     header h1 {
         padding-top: 20px;  
         font-size: 1.7em;
@@ -181,6 +190,9 @@ header li a {
     }
 }
 
+
+/* Mobile version */
+
 @media (max-width: 600px){
     header h1 {
         padding-top: 20px; 
@@ -193,7 +205,7 @@ header li a {
     }
     .logo img {
         width: 12%;
-        min-width: 80px;
+        min-width: 60px;
         height: auto;
         float: left;
         margin: 20px 10px 5px 0px;
@@ -244,28 +256,47 @@ header li a {
         top: 80px;
         right: 5%;
         background: black;
-        border: solid 3px pink;
         border-radius: 6px;
-        width: 50vw;
-        height: auto;
+        width: auto;
+        height: 0px;
         overflow: hidden;
         color: white;
-        /* hide the menu above the screen by default */
-        transform: translateY(-150%);
-        /* transition adds a little animation when sliding in and out the menu */
-        transition: transform 0.2s ease;
+        
       }
-      nav li {
+
+      /* .here, .left-of-here, .right-of-here {
+        border: none;
+        background-color: #000;
+        margin: 0;
+        padding: 0;
+    } */
+
+      nav li , .here, .left-of-here, .right-of-here{
+          background-color: unset;
+          display:block;
           padding: 5px 0px;
+          margin: 0 8px;
           list-style-type: none;
+          font-size: 1em;
+          background-color: none;
+          border: none;
+          width: 100%;
+          text-align: left;
       }
+
+      
+
+
       .showNav {
         /* show the menu */
-        transform: translateY(0);
+        width: auto;
+        height: auto;
+        border: solid 3px pink;
       }
       
       
 }
+
 
 /*Main ---------------------------------------------------------------*/
 
