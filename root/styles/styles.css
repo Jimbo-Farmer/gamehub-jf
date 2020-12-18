@@ -21,6 +21,10 @@ header {
     
 }
 
+.hamburger{
+    display: none;
+}
+
 /* Top Left Header*/
 .logo img {
     width: 12%;
@@ -71,31 +75,31 @@ header h2 {
 
 
 /* Nav Bar */
-nav {
+/* nav {
     clear: left;
     text-align: center;
     
-}
-nav ul {
+} */
+/* nav ul {
     padding-left: 0;
     padding-right: 0;
     margin-left: 0px;         
     margin-bottom: 0;
-} 
+}  */
 
 header a {
     color: white;
     text-decoration: none;      /*remove hyperlink look*/
 }
 
-header li {
+/* header li {
     display: inline-block;
     width: 19.9%;               /*leave room for border widths, therefore not 20%*/
-    margin-top: 20px;
+    /* margin-top: 20px;
     font-size: 1.5em;
     padding: 5px 0;
-    border-bottom: solid 3px white;   
-}
+    border-bottom: solid 3px white;    
+} */
 
 /* Make whole nav item clickable, not just text */
 header li a {
@@ -104,7 +108,7 @@ header li a {
 
 
 /* Add a box around nav item to show which page the user is on */
- .here {
+ /* .here {
     border: solid 3px white;  
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
@@ -112,25 +116,25 @@ header li a {
     background-color: rgb(205,55,80); 
     margin-left: -3px;
     margin-right: -3px;
-}
+} */
 
 /* Add a border radius at the bottom to get full 'folder divider' effect */
-.right-of-here {
+/* .right-of-here {
     border: solid 3px white;
     border-top: none;
     border-right: none;
     margin-left: 0px;
     border-bottom-left-radius: 6px;
-}
+} */
 
-.left-of-here {
+/* .left-of-here {
     border: solid 3px white;
     border-top: none;
     border-left: none;
     padding-right: 3px;
     margin-right: -3px;
     border-bottom-right-radius: 6px;
-}
+} */
 
 @media (min-width: 800px) and (max-width: 1000px){
     header h1 {
@@ -181,10 +185,10 @@ header li a {
     header h1 {
         padding-top: 20px; 
         padding-left: 20px; 
-        font-size: 1.7em;
+        font-size: 1.3em;
     }
     header h2 {
-        font-size: 1.1em;
+        font-size: 0.7em;
         padding-left: 20px;
     }
     .logo img {
@@ -192,7 +196,7 @@ header li a {
         min-width: 80px;
         height: auto;
         float: left;
-        margin: 20px 0px 5px 0px;
+        margin: 20px 10px 5px 0px;
         position: relative;
         left: 3%;
     }
@@ -200,19 +204,67 @@ header li a {
         font-size: 0.6em;
     }
     .top-right {
-        top: 20px;
-    }
-    .top-right img {
-        width: 22px;
-        height: 20px
-    }
-    
-    nav {
         display: none;
     }
+       
+    
     header {
         padding-bottom: 20px;
+        border-bottom: solid 3px white;
     }
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 20px;
+        background-color: transparent;
+        background-image: url("../icons and logos/hamburger-menu.png");
+        border: none;
+        width: 45px;
+        height: 34px;
+        background-size: 100%;
+    }
+    .showClose {
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 20px;
+        background-color: transparent;
+        background-image: url("../icons and logos/close-menu.png");
+        border: none;
+        width: 45px;
+        height: 34px;
+        background-size: 100%;
+        z-index: 1000;
+        
+    }
+    nav {
+        display: block;
+        position: absolute;
+        top: 80px;
+        right: 5%;
+        background: black;
+        border: solid 3px pink;
+        border-radius: 6px;
+        width: 50vw;
+        height: auto;
+        overflow: hidden;
+        color: white;
+        /* hide the menu above the screen by default */
+        transform: translateY(-150%);
+        /* transition adds a little animation when sliding in and out the menu */
+        transition: transform 0.2s ease;
+      }
+      nav li {
+          padding: 5px 0px;
+          list-style-type: none;
+      }
+      .showNav {
+        /* show the menu */
+        transform: translateY(0);
+      }
+      
+      
 }
 
 /*Main ---------------------------------------------------------------*/
