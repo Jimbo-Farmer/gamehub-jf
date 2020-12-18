@@ -9,8 +9,7 @@ body {
 }
 
 
-/* Header----------------------------------------------------------*/
-
+/* Header------------------------------------------------------------------------------------------------------------*/
 header {
     
     background: rgb(0,0,0);
@@ -20,6 +19,17 @@ header {
     text-transform: uppercase;
     position: relative;
     
+}
+
+/* Top Left Header*/
+.logo img {
+    width: 12%;
+    min-width: 100px;
+    height: auto;
+    float: left;
+    margin: 40px 0px 10px 0px;
+    position: relative;
+    left: 5%;
 }
 
 header h1 {
@@ -36,6 +46,31 @@ header h2 {
     text-shadow: 1px 1px 1px #87FBFF;
 }
 
+
+/* Top Right Header*/
+.top-right {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 40px; 
+    text-align: right;
+}
+
+.text {
+    position: relative;
+    bottom: 10px;
+    right: 5%;
+    font-size: 0.8em; 
+}
+
+.top-right img {
+    height: 30px;
+    width: 32px;
+    padding-bottom: 5px;
+}
+
+
+/* Nav Bar */
 nav {
     clear: left;
     text-align: center;
@@ -43,27 +78,23 @@ nav {
 }
 nav ul {
     padding-left: 0;
-    margin-left: -37px;         /*hacky fix to get nav bar to extend across entire viewport*/
-    margin-right: -37px;        /*hacky fix to get nav bar to extend across entire viewport*/
+    padding-right: 0;
+    margin-left: 0px;         
     margin-bottom: 0;
-    
-}
+} 
 
 header a {
     color: white;
-    text-decoration: none;
-    
+    text-decoration: none;      /*remove hyperlink look*/
 }
 
 header li {
     display: inline-block;
-    width: 19%;
+    width: 19.9%;               /*leave room for border widths, therefore not 20%*/
     margin-top: 20px;
-    font-size: 1.2em;
+    font-size: 1.5em;
     padding: 5px 0;
-    border-bottom: solid 3px white;
-    
-    
+    border-bottom: solid 3px white;   
 }
 
 /* Make whole nav item clickable, not just text */
@@ -72,38 +103,15 @@ header li a {
 }
 
 
-.account-cart {
-    position: absolute;
-    right: 5%;
-    top: 40px;
-
-    
-}
-
-.account-cart a {
-    display: block;
-    text-align: right;
-    font-size: 0.8em;
-    padding: 5px 0;
-}
-
-.logo img {
-    width: 12%;
-    min-width: 100px;
-    height: auto;
-    float: left;
-    margin: 40px 0px 10px 0px;
-    position: relative;
-    left: 5%;
-}
-
 /* Add a box around nav item to show which page the user is on */
-.here {
+ .here {
     border: solid 3px white;  
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     border-bottom: solid 3px rgb(205,55,80);  
-    background-color: rgb(205,55,80);
+    background-color: rgb(205,55,80); 
+    margin-left: -3px;
+    margin-right: -3px;
 }
 
 /* Add a border radius at the bottom to get full 'folder divider' effect */
@@ -111,8 +119,7 @@ header li a {
     border: solid 3px white;
     border-top: none;
     border-right: none;
-    padding-left: 3px;
-    margin-left: -3.2px;
+    margin-left: 0px;
     border-bottom-left-radius: 6px;
 }
 
@@ -121,22 +128,97 @@ header li a {
     border-top: none;
     border-left: none;
     padding-right: 3px;
-    margin-right: -3.2px;
+    margin-right: -3px;
     border-bottom-right-radius: 6px;
-
 }
 
+@media (min-width: 800px) and (max-width: 1000px){
+    header h1 {
+        font-size: 2em;
+        
+    }
+    header h2 {
+        font-size: 1.4em;
+    }
+    nav li {
+        font-size: 1.1em ;
+    }
+}
 
+@media (min-width: 600px) and (max-width: 800px){
+    header h1 {
+        padding-top: 20px;  
+        font-size: 1.7em;
+    }
+    header h2 {
+        font-size: 1.1em;
+    }
+    nav li {
+        font-size: 0.8em ;
+    }
+    .logo img {
+        width: 12%;
+        min-width: 80px;
+        height: auto;
+        float: left;
+        margin: 20px 0px 5px 0px;
+        position: relative;
+        left: 3%;
+    }
+    .text {
+        font-size: 0.6em;
+    }
+    .top-right {
+        top: 20px;
+    }
+    .top-right img {
+        width: 22px;
+        height: 20px
+    }
+}
 
-
-
-
+@media (max-width: 600px){
+    header h1 {
+        padding-top: 20px;  
+        font-size: 1.7em;
+    }
+    header h2 {
+        font-size: 1.1em;
+    
+    }
+    .logo img {
+        width: 12%;
+        min-width: 80px;
+        height: auto;
+        float: left;
+        margin: 20px 0px 5px 0px;
+        position: relative;
+        left: 3%;
+    }
+    .text {
+        font-size: 0.6em;
+    }
+    .top-right {
+        top: 20px;
+    }
+    .top-right img {
+        width: 22px;
+        height: 20px
+    }
+    
+    nav {
+        display: none;
+    }
+    header {
+        padding-bottom: 20px;
+    }
+}
 
 /*Main ---------------------------------------------------------------*/
 
 main {
     background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 60%, rgba(205,55,80,1) 100%, rgba(205,55,80,1) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 90%, rgba(205,55,80,1) 100%, rgba(205,55,80,1) 100%);
 }
 
 main p {
