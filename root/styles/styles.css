@@ -306,12 +306,14 @@ header li a {
 }
 
 
-/*Main ---------------------------------------------------------------*/
+/*Main ------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------*/
 
 main {
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 90%, rgba(205,55,80,1) 100%, rgba(205,55,80,1) 100%);
     position: relative;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .store-navigation ul {
@@ -353,7 +355,8 @@ main {
 
 .main-storefront {
     display: flex;
-    justify-content: center;   
+    text-align: center; 
+     
 }
 .main-storefront section {
     padding: 0 2.5%;
@@ -361,6 +364,17 @@ main {
 
 .main-storefront img {
     width: 100%;
+}
+
+.main-storefront span {
+    color: #87FBFF;
+}
+
+.main-storefront h2 {
+    color: white; 
+    text-transform: uppercase;
+    text-align: left;
+
 }
 
 .news {
@@ -373,8 +387,8 @@ main {
     border: solid 3px white;
     border-radius: 6px; 
     color: white;
-    margin: 24px 0;
-    justify-content: center;
+    margin: 12px 0 24px 0;
+    
 }
 
 .featured {
@@ -386,26 +400,86 @@ main {
 .featured-item {
     
     width: 100%;
-    border: solid 3px white;
+    border: solid 3px #87FBFF;
     border-radius: 6px; 
     color: white;
-    margin: 24px 0;
+    margin: 12px 0 24px 0;
 }
 
 
 .reviews {
     flex: 1;
-    text-align: center;
+    text-align: left;
 }
 
 .reviews-item {
     width: 100%;
-    border: solid 3px white;
+    border: solid 3px #FF9AD7;
     border-radius: 6px; 
     color: white;
-    margin: 24px 0;
+    margin: 12px 0 24px 0;
 }
 
+.reviews h3, p {
+    margin-left: 1%;
+}
+
+
+
+/* Slight size reduction for smaller screens and drop news column--------------*/
+
+@media (min-width: 800px) and (max-width: 1000px){
+    .store-navigation li {
+        font-size: 0.9em;
+        padding: 8px 1%;
+    }
+    
+    .news {
+        display: none;
+    }
+    .featured {
+        flex: 4;
+    }
+    .reviews {
+        flex: 1;
+    }
+
+}
+
+@media  (max-width: 800px){
+    .news {
+        display: none;
+    }
+    .main-storefront {
+        display: unset;
+    }
+    .store-navigation li {
+        font-size: 0.7em;
+        padding: 8px 0.45%;
+    }
+    .main-storefront h2 {
+        font-size: 0.9em;
+    }
+
+    
+}
+
+@media  (max-width: 600px){
+    #search {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 0;
+        height: 38px;
+        margin: auto 10px auto 0px;
+        z-index: 1000;
+    }
+    #search input {
+        height: 80%;
+        border-radius: 19px;
+        width: 50vw;
+    }
+}
 
 
 
