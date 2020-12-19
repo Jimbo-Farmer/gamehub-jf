@@ -7,3 +7,5 @@ function toggleHamburger(){
     ham.classList.toggle("showClose")
     console.log("clicked")
   }
+
+

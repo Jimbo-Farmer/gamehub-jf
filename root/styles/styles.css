@@ -36,14 +36,12 @@ header {
 header h1 {
     padding-top: 40px;
     font-size: 2.5em;
-    margin: 0;
-    margin-left: 20%;
+    margin: 0 0 0 20%;
     text-shadow: 2px 2px 2px #87FBFF;
 }
 header h2 {
     font-size: 1.8em;
-    margin: 0;
-    margin-left: 20%;
+    margin: 0 0 0 20%;
     text-shadow: 1px 1px 1px #87FBFF;
 }
 
@@ -71,17 +69,14 @@ header h2 {
 }
 
 /* Navbar  */
-
 nav {
     clear: left;
-    text-align: center;
+    text-align: center; 
     
 } 
 nav ul {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0px;         
-    margin-bottom: 0;
+    padding: 0;
+    margin: 0;
 }  
 
 header a {
@@ -98,26 +93,30 @@ header li {
     border-bottom: solid 3px white;    
 } 
 
-/* Make whole nav item clickable, not just text */
 header li a {
-    display: block;
+    display: block;             /* Make whole nav item clickable, not just text */
 }
 
 
-
-/* Add a box around nav item to show which page the user is on */
-.here {
+.here {                         /* Add a box around nav item to show which page the user is on */
     border: solid 3px white;  
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    border-bottom: solid 3px rgb(205,55,80);  
-    background-color: rgb(205,55,80); 
     margin-left: -3px;
     margin-right: -3px;
 } 
+.here#store {
+    border-bottom: solid 3px rgb(205,55,80);  
+    background-color: rgb(205,55,80); 
+}
 
-/* Add a border radius at the bottom to get full 'folder divider' effect */
-.right-of-here {
+.here#sell {
+    border-bottom: solid 3px #6000A9;  
+    background-color:  #6000A9; 
+}
+
+
+.right-of-here {                /* Add a border radius at the bottom to get full 'folder divider' effect */
     border: solid 3px white;
     border-top: none;
     border-right: none;
@@ -125,7 +124,7 @@ header li a {
     border-bottom-left-radius: 6px;
 } 
 
-.left-of-here {
+.left-of-here {                 /* Add a border radius at the bottom to get full 'folder divider' effect */
     border: solid 3px white;
     border-top: none;
     border-left: none;
@@ -194,7 +193,7 @@ header li a {
 }
 
 
-/* Mobile version */
+/* Mobile version --------------------------*/
 
 @media (max-width: 600px){
     header h1 {
@@ -238,6 +237,7 @@ header li a {
         width: 45px;
         height: 34px;
         background-size: 100%;
+        z-index: 1000;
     }
     .showClose {
         display: block;
@@ -264,10 +264,11 @@ header li a {
         height: 0px;
         overflow: hidden;
         color: white;
+        z-index: 1000;
         
       }
    
-      nav li , .here, .left-of-here, .right-of-here{
+      nav li , .here, .left-of-here, .right-of-here, #store, #sell{
           background-color: unset;
           display:block;
           padding: 5px 0px;
@@ -310,13 +311,100 @@ header li a {
 main {
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 90%, rgba(205,55,80,1) 100%, rgba(205,55,80,1) 100%);
+    position: relative;
 }
 
-main p {
+.store-navigation ul {
     margin-top: 0;
-    color: white;
+    padding: 0;
+    list-style-type: none;    /*Remove bullet points*/   
 }
 
+.store-navigation a {
+    text-decoration: none;    /*Remove hyperlink underline*/ 
+    color: white; 
+}
+
+
+.store-navigation li {
+    display: inline-block;
+    font-family: "ArialRounded", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 8px 2%;
+    vertical-align: top;
+}
+
+.store-navigation button {
+    height: 25px;
+    width: 25px;
+    background-image: url("../icons and logos/search-icon.png");
+    background-size: 100%;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 3px;
+}
+
+.store-navigation input {
+    border-radius: 10px;
+}
+
+
+.main-storefront {
+    display: flex;
+    justify-content: center;   
+}
+.main-storefront section {
+    padding: 0 2.5%;
+}
+
+.main-storefront img {
+    width: 100%;
+}
+
+.news {
+    flex: 1;
+    margin: 0;
+}
+
+.news-item {
+    width: 100%;
+    border: solid 3px white;
+    border-radius: 6px; 
+    color: white;
+    margin: 24px 0;
+    justify-content: center;
+}
+
+.featured {
+    flex: 3;
+    text-align: center;
+        
+}
+
+.featured-item {
+    
+    width: 100%;
+    border: solid 3px white;
+    border-radius: 6px; 
+    color: white;
+    margin: 24px 0;
+}
+
+
+.reviews {
+    flex: 1;
+    text-align: center;
+}
+
+.reviews-item {
+    width: 100%;
+    border: solid 3px white;
+    border-radius: 6px; 
+    color: white;
+    margin: 24px 0;
+}
 
 
 
