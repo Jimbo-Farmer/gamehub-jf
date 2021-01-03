@@ -19,193 +19,32 @@ header {
     font-family: "ArialRounded", Arial, Helvetica, sans-serif ;
     text-transform: uppercase;
     position: relative;
-    
+    padding-bottom: 20px;
+    border-bottom: solid 3px white;
 }
 
 /* Top Left Header - logo and titles*/
-.logo img {
-    width: 12%;
-    min-width: 100px;
-    height: auto;
-    float: left;
-    margin: 40px 0px 10px 0px;
-    position: relative;
-    left: 5%;
-}
-
 header h1 {
-    padding-top: 40px;
-    font-size: 2.5em;
-    margin: 0 0 0 20%;
+    padding: 20px 0 0 20px; 
+    margin: 0 0 0 20%; 
+    font-size: 1.3em;
     text-shadow: 2px 2px 2px #87FBFF;
 }
+
 header h2 {
-    font-size: 1.8em;
+    font-size: 0.7em;
+    padding-left: 20px;
     margin: 0 0 0 20%;
     text-shadow: 1px 1px 1px #87FBFF;
 }
 
-
-/* Top Right Header - cart and account*/
-.top-right {
-    display: block;
-    position: absolute;
-    right: 5%;
-    top: 40px; 
-    text-align: right;
-}
-
-.text {
-    position: relative;
-    bottom: 10px;
-    right: 5%;
-    font-size: 0.8em; 
-}
-
-.top-right img {
-    height: 30px;
-    width: 32px;
-    padding-bottom: 5px;
-}
-
-/* Navbar  */
-nav {
-    clear: left;
-    text-align: center; 
-    
-} 
-nav ul {
-    padding: 0;
-    margin: 0;
-}  
-
-header a {
+header a {                              /*  remove hyperlink look */
     color: white;
-    text-decoration: none;      /*remove hyperlink look*/
-}
-
-header li {
-    display: inline-block;
-    width: 19.9%;               /*leave room for border widths, therefore not 20%*/
-    margin-top: 20px;
-    font-size: 1.5em;
-    padding: 5px 0;
-    border-bottom: solid 3px white;    
-} 
-
-header li a {
-    display: block;             /* Make whole nav item clickable, not just text */
+    text-decoration: none;
 }
 
 
-.here {                         /* Add a box around nav item to show which page the user is on */
-    border: solid 3px white;  
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    margin-left: -3px;
-    margin-right: -3px;
-} 
-.here#store {
-    border-bottom: solid 3px rgb(205,55,80);  
-    background-color: rgb(205,55,80); 
-}
-
-.here#sell {
-    border-bottom: solid 3px #6000A9;  
-    background-color:  #6000A9; 
-}
-
-
-.right-of-here {                /* Add a border radius at the bottom to get full 'folder divider' effect */
-    border: solid 3px white;
-    border-top: none;
-    border-right: none;
-    margin-left: 0px;
-    border-bottom-left-radius: 6px;
-} 
-
-.left-of-here {                 /* Add a border radius at the bottom to get full 'folder divider' effect */
-    border: solid 3px white;
-    border-top: none;
-    border-left: none;
-    padding-right: 3px;
-    margin-right: -3px;
-    border-bottom-right-radius: 6px;
-} 
-
-/* hide mobile only elements */
-.hamburger{
-    display: none;
-}
-.mobile-tr {
-    display: none;
-}
-
-/* Slight size reduction for smaller screens --------------*/
-
-@media (min-width: 800px) and (max-width: 1000px){
-    header h1 {
-        font-size: 2em;
-        
-    }
-    header h2 {
-        font-size: 1.4em;
-    }
-    nav li {
-        font-size: 1.1em ;
-    }
-}
-
-/* Further size reduction for smaller screens */
-
-@media (min-width: 600px) and (max-width: 800px){
-    
-
-    header h1 {
-        padding-top: 20px;  
-        font-size: 1.7em;
-    }
-    header h2 {
-        font-size: 1.1em;
-    }
-    nav li {
-        font-size: 0.8em ;
-    }
-    .logo img {
-        width: 12%;
-        min-width: 80px;
-        height: auto;
-        float: left;
-        margin: 20px 0px 5px 0px;
-        position: relative;
-        left: 3%;
-    }
-    .text {
-        font-size: 0.6em;
-    }
-    .top-right {
-        top: 20px;
-    }
-    .top-right img {
-        width: 22px;
-        height: 20px
-    }
-}
-
-
-/* Mobile version --------------------------*/
-
-@media (max-width: 600px){
-    header h1 {
-        padding-top: 20px; 
-        padding-left: 20px; 
-        font-size: 1.3em;
-    }
-    header h2 {
-        font-size: 0.7em;
-        padding-left: 20px;
-    }
-    .logo img {
+.logo img {
         width: 12%;
         min-width: 60px;
         height: auto;
@@ -213,97 +52,104 @@ header li a {
         margin: 20px 10px 5px 0px;
         position: relative;
         left: 3%;
-    }
-    .text {
-        font-size: 0.6em;
-    }
-    .top-right {
-        display: none;
-    }
-       
-    
-    header {
-        padding-bottom: 20px;
-        border-bottom: solid 3px white;
-    }
-    .hamburger {
-        display: block;
-        position: absolute;
-        right: 5%;
-        top: 20px;
-        background-color: transparent;
-        background-image: url("../icons and logos/hamburger-menu.png");
-        border: none;
-        width: 45px;
-        height: 34px;
-        background-size: 100%;
-        z-index: 1000;
-    }
-    .showClose {
-        display: block;
-        position: absolute;
-        right: 5%;
-        top: 20px;
-        background-color: transparent;
-        background-image: url("../icons and logos/close-menu.png");
-        border: none;
-        width: 45px;
-        height: 34px;
-        background-size: 100%;
-        z-index: 1000;
-        
-    }
-    nav {
-        display: block;
-        position: absolute;
-        top: 80px;
-        right: 5%;
-        background: black;
-        border-radius: 6px;
-        width: auto;
-        height: 0px;
-        overflow: hidden;
-        color: white;
-        z-index: 1000;
-        
-      }
-   
-      nav li , .here, .left-of-here, .right-of-here, #store, #sell{
-          background-color: unset;
-          display:block;
-          padding: 5px 0px;
-          margin: 0 8px;
-          list-style-type: none;
-          font-size: 1em;
-          background-color: none;
-          border: none;
-          width: 100%;
-          text-align: left;
-      }
-  
-      .showNav {
-        /* show the menu */
-        width: auto;
-        height: auto;
-        border: solid 3px #FF9AD7;
-      }
-    
-      .mobile-tr {
-          display: inline;
-          position: fixed;
-          bottom: 0;
-          background-color: rgba(255,255,255,0.5);
-          width: 100%;
-          border: solid 3px white;
-      }
-      .mobile-tr a {
-          height: 30px;
-          width: 32px;
-          padding: 5px 10px;
-      }
-      
-      
 }
+
+.top-right {
+    display: none;
+}
+    
+.hamburger, .showClose {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 20px;
+    background-color: transparent;
+    background-image: url("../icons and logos/hamburger-menu.png");
+    border: none;
+    width: 45px;
+    height: 34px;
+    background-size: 100%;
+    z-index: 1000;
+}
+
+.showClose {
+    background-image: url("../icons and logos/close-menu.png");
+}
+
+
+nav {
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: 5%;
+    background: black;
+    border-radius: 6px;
+    width: auto; 
+    height: 0px;
+    overflow: hidden;
+    color: white;
+    z-index: 1000;
+    
+}
+
+nav ul {
+    padding: 0px 10px;
+}
+
+nav li {
+    margin: 10px 0;
+
+    list-style-type: none;
+    color: white;
+}
+
+nav li a {
+    display: block;                         /* make whole nav item clickable, not just text*/
+}
+
+.showNav {                                  /* show the menu */
+    width: auto;
+    height: auto;
+    border: solid 3px #FF9AD7;
+}
+
+
+
+/* account, cart, search at bottom of screen */
+.mobile-tr {
+    display: inline;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.5);
+    width: 100%;
+    border: solid 3px white;
+}
+
+.mobile-tr a {
+    height: 30px;
+    width: 32px;
+    padding: 5px 10px;
+}
+    
+
+#search {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    height: 38px;
+    margin: auto 10px auto 0px;
+    z-index: 1000;
+}
+#search input {
+    height: 80%;
+    border-radius: 19px;
+    width: 50vw;
+}
+
+
+
+
 
 
 /*Main ------------------------------------------------------------------------------------------------------------
@@ -332,8 +178,9 @@ main {
     display: inline-block;
     font-family: "ArialRounded", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
-    padding: 8px 2%;
+    padding: 8px 0.45%;
     vertical-align: top;
+    font-size: 0.7em;
 }
 
 .store-navigation button {
@@ -352,12 +199,12 @@ main {
     border-radius: 10px;
 }
 
-
-.main-storefront {
-    display: flex;
-    text-align: center; 
-     
+.this-page a {
+    text-decoration: underline;
+    font-weight: bold;
 }
+
+
 .main-storefront section {
     padding: 0 2.5%;
 }
@@ -370,54 +217,44 @@ main {
     color: #87FBFF;
 }
 
-.main-storefront h2 {
+.main-storefront h3 {
     color: white; 
     text-transform: uppercase;
     text-align: left;
-
 }
 
 .news {
+    display: none;
     flex: 1;
     margin: 0;
 }
 
-.news-item {
+.news-item, .featured-item, .reviews-item {
     width: 100%;
     border: solid 3px white;
     border-radius: 6px; 
     color: white;
-    margin: 12px 0 24px 0;
-    
+    margin: 12px 0 24px 0;  
 }
 
 .featured {
-    flex: 3;
-    text-align: center;
-        
+    flex: 4;
+    text-align: center;  
 }
 
 .featured-item {
-    
-    width: 100%;
-    border: solid 3px #87FBFF;
-    border-radius: 6px; 
-    color: white;
-    margin: 12px 0 24px 0;
+    border-color: #87FBFF;  
 }
 
-
 .reviews {
+    display: none;
     flex: 1;
     text-align: left;
 }
 
 .reviews-item {
-    width: 100%;
-    border: solid 3px #FF9AD7;
-    border-radius: 6px; 
-    color: white;
-    margin: 12px 0 24px 0;
+    border-color: #FF9AD7;
+    
 }
 
 .reviews h3, p {
@@ -426,61 +263,178 @@ main {
 
 
 
-/* Slight size reduction for smaller screens and drop news column--------------*/
+/* Drop mobile features for screens wider than 600px */
 
-@media (min-width: 800px) and (max-width: 1000px){
+@media (min-width: 600px){
+
+    /* header changes -------------------------- */
+
+    .hamburger, .showClose, .mobile-tr {           /*  remove hamburger menu */
+        display: none;
+    }
+    header {
+        padding-bottom: 0;
+        border: none;
+    }
+    header h1 {
+        font-size: 1.7em;
+    }
+    header h2 {
+        font-size: 1.1em;
+    }
+    .top-right {                                    /*repostion account and cart to top right*/
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 20px; 
+        text-align: right;
+    }
+    .text {
+        position: relative;
+        bottom: 10px;
+        right: 5%;
+        font-size: 0.6em; 
+    }
+    .top-right img {
+        height: 22px;
+        width: 20px;
+        padding-bottom: 5px;
+    }
+    .logo img {
+        min-width: 80px;
+    }
+    nav {
+        height: auto;
+        position: relative;
+        top: auto;
+        right: auto;
+        background-color: unset;
+        clear: left;
+        text-align: center;
+            
+    }
+    nav ul {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        width: 19.9%;               /*leave room for border widths, therefore not 20%*/
+        margin: 0;
+        font-size: 0.8em;
+        padding: 5px 0;
+        border-bottom: solid 3px white;
+    }
+    .here {                         /* Add a box around nav item to show which page the user is on */
+        border: solid 3px white;  
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        margin-left: -3px;
+        margin-right: -3px;
+       
+    } 
+    .here#store {
+        border-bottom: solid 3px rgb(205,55,80);   
+        background-color: rgb(205,55,80); 
+    }
+
+    .here#sell {
+        border-bottom: solid 3px #6000A9;  
+        background-color:  #6000A9; 
+    }
+
+
+    /* main changes -------------------------- */
+    #search {
+        position: relative;
+    }
+    #search input {
+        width: 20vw;
+        margin: 6px 0 0 10px;
+        height: 60%;
+    }
+    .main-storefront h3 {
+        font-size: 1.3em;
+    }
+
+    .main-storefront {
+        display: flex;
+        text-align: center; 
+         
+    }
+
+}
+
+
+/* Increase sizes for larger screens (over 800px wide) */
+@media (min-width: 800px){
+    header h1 {
+        font-size: 2em;
+        
+    }
+    header h2 {
+        font-size: 1.4em;
+    }
+
+    .logo img {
+        min-width: 100px;
+        left: 5%;
+    }
+    .top-right img {
+        height: 30px;
+        width: 32px;  
+    }
+    .text {
+        font-size: 0.8em;
+    }
+
+    nav li {
+        font-size: 1.1em ;
+    }
+    nav ul {
+        margin-top: 25px;
+    }
     .store-navigation li {
         font-size: 0.9em;
         padding: 8px 1%;
     }
-    
-    .news {
-        display: none;
-    }
-    .featured {
-        flex: 4;
-    }
     .reviews {
-        flex: 1;
-    }
-
-}
-
-@media  (max-width: 800px){
-    .news {
-        display: none;
-    }
-    .main-storefront {
         display: unset;
     }
+}
+
+/* Increase sizes for larger screens (over 1000px)*/
+@media (min-width: 1000px){
+    header h1 {
+        font-size: 2.5em;
+        
+    }
+    header h2 {
+        font-size: 1.8em;
+    }
+    nav li {
+        font-size: 1.5em ;
+    }
     .store-navigation li {
-        font-size: 0.7em;
-        padding: 8px 0.45%;
+        font-size: 1em;
+        padding: 8px 2%;
     }
-    .main-storefront h2 {
-        font-size: 0.9em;
+    .main-storefront h3 {
+        font-size: 1.5em;
     }
-
-    
-}
-
-@media  (max-width: 600px){
-    #search {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        padding: 0;
-        height: 38px;
-        margin: auto 10px auto 0px;
-        z-index: 1000;
+    .news {
+        display: unset;
     }
-    #search input {
-        height: 80%;
-        border-radius: 19px;
-        width: 50vw;
+    .featured {
+        flex: 3;
     }
 }
+
+
+
 
 
 
 /* Help with linear gradient from https://cssgradient.io/ */
+
