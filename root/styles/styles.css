@@ -330,8 +330,8 @@ main {
         border: solid 3px white;  
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
-        margin-left: -3px;
-        margin-right: -3px;
+        margin-left: -1.5px;
+        margin-right: -1.5px;
        
     } 
     .here#store {
@@ -350,7 +350,7 @@ main {
         position: relative;
     }
     #search input {
-        width: 20vw;
+        width: 18vw;
         margin: 6px 0 0 10px;
         height: 60%;
     }
@@ -397,7 +397,7 @@ main {
     }
     .store-navigation li {
         font-size: 0.9em;
-        padding: 8px 1%;
+        padding: 8px 0.9%;
     }
     .reviews {
         display: unset;
@@ -418,7 +418,7 @@ main {
     }
     .store-navigation li {
         font-size: 1em;
-        padding: 8px 2%;
+        padding: 8px 1.8%;
     }
     .main-storefront h3 {
         font-size: 1.5em;
