@@ -1,0 +1,160 @@
+@font-face {
+    font-family: "ArialRounded";
+    src: url("Arial Rounded MT Std Bold.ttf") format("truetype");
+  }
+
+
+body {
+    margin: 0px;
+    background-color: black;
+}
+
+
+
+
+/* ------------------------------------------------------Main------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------*/
+
+main {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 98%, rgba(205,55,80,1) 100%, rgba(205,55,80,1) 100%);
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.store-navigation ul {
+    margin-top: 0;
+    padding: 0;
+    list-style-type: none;    /*Remove bullet points*/   
+}
+
+.store-navigation a {
+    text-decoration: none;    /*Remove hyperlink underline*/ 
+    color: white; 
+}
+
+
+.store-navigation li {
+    display: inline-block;
+    font-family: "ArialRounded", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 8px 0.45%;
+    vertical-align: top;
+    font-size: 0.7em;
+}
+
+#search {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    height: 38px;
+    margin: auto 10px auto 0px;
+    z-index: 1000;   
+}
+
+#search input {
+    height: 25px;
+    border-radius: 10px 0px 0px 10px;
+    width: 40vw;
+    border: 1px solid black;
+    border-right: none;
+}
+
+#search-button {
+    display: inline-block;
+    height: 23px;
+    width: 28px;
+    background: url("../icons and logos/search-icon.png") center;
+    background-size: 80%;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 7px;
+    background-color: white;
+    border-left: none;
+    border-radius: 0 10px 10px 0;  
+}
+
+.store-navigation input {
+    border-radius: 10px;
+}
+
+.this-page a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+.main-storefront section {
+    padding: 0 2.5%;
+}
+
+.main-storefront img {
+    width: 100%;
+    margin-top: -12%;   /*remove the green playbox bars from the tops of the game images*/
+    filter: blur(4px);
+}
+
+.main-storefront span {
+    color: #87FBFF;
+}
+
+.main-storefront h3 {
+    color: white; 
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.news {
+    display: none;
+    flex: 1;
+    margin: 0;
+}
+
+.news-item, .featured-item, .reviews-item {
+    width: 100%;
+    border: solid 3px white;
+    border-radius: 6px; 
+    color: white;
+    margin: 12px 0 24px 0; 
+    overflow: hidden; 
+    }
+
+
+.featured {
+    flex: 4;
+    text-align: center; 
+}
+
+.featured-item {
+    border-color: #87FBFF;
+    max-height: 700px;   
+}
+
+.reviews {
+    display: none;
+    flex: 1;
+    text-align: left;
+}
+
+.reviews-item {
+    border-color: #FF9AD7;   
+}
+
+.reviews h4, .reviews p {
+    padding: 5px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Help with linear gradient from https://cssgradient.io/ */
+

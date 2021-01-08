@@ -1,0 +1,199 @@
+/* Drop mobile features for screens wider than 600px -----------------------------------------------------------------------------------*/
+
+@media (min-width: 600px){
+
+    /* header changes -------------------------- */
+
+    .hamburger, .showClose, .mobile-tr {           /*  remove hamburger menu */
+        display: none;
+    }
+    header {
+        padding-bottom: 0;
+        border: none;
+    }
+    header h1 {
+        font-size: 1.7em;
+    }
+    header h2 {
+        font-size: 1.1em;
+    }
+    .top-right {                                    /*repostion account and cart to top right*/
+        display: block;
+        position: absolute;
+        right: 4%;
+        top: 25px; 
+        text-align: right;
+    }
+    .text {
+        position: relative;
+        bottom: 10px;
+        right: 5%;
+        font-size: 0.6em; 
+    }
+    .top-right img {
+        height: 22px;
+        width: 20px;
+        padding-bottom: 5px;
+    }
+    .logo img {
+        min-width: 80px;
+    }
+    nav {
+        height: auto;
+        position: relative;
+        top: auto;
+        right: auto;
+        background-color: unset;
+        clear: left;
+        text-align: center;
+            
+    }
+    nav ul {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        width: 19.9%;               /*leave room for border widths, therefore not 20%*/
+        margin: 0;
+        font-size: 0.8em;
+        padding: 5px 0;
+        border-bottom: solid 3px white;
+        
+    }
+    .here {                         /* Add a box around nav item to show which page the user is on */
+        border: solid 3px white;  
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        margin-left: -1.5px;
+        margin-right: -1.5px;
+       
+    } 
+    .here#store {
+        border-bottom: solid 3px rgb(205,55,80);   
+        background-color: rgb(205,55,80); 
+    }
+
+    .here#sell {
+        border-bottom: solid 3px #6000A9;  
+        background-color:  #6000A9; 
+    }
+
+
+    /* main changes -------------------------- */
+    #search {
+        position: relative;
+    }
+    #search input {
+        width: 18vw;
+        margin: 6px 0 0 10px;
+        height: 60%;
+    }
+   
+    .main-storefront h3 {
+        font-size: 1.3em;
+    }
+
+    .main-storefront {
+        display: flex;
+        text-align: center;   
+    }
+
+    .store-navigation a {
+        transition-property: all;
+        transition-duration: 0.2s;
+        
+    }
+    .store-navigation a:hover {
+        font-weight: bold;
+    }
+
+    #search-button {
+        height: 21.5px;
+        top: 6px;
+    }
+
+
+
+    /* footer changes */
+
+    .quick-links div {
+        display: inline-block;
+        margin: 0;
+    }
+    .quick-links {
+        text-align: center;
+    }
+    #legal {
+        text-align: left;
+    }
+    #address {
+        text-align: right;
+    }
+}
+
+
+/* Increase sizes for larger screens (over 800px wide) */
+@media (min-width: 800px){
+    header h1 {
+        font-size: 2em;
+        
+    }
+    header h2 {
+        font-size: 1.4em;
+    }
+
+    .logo img {
+        min-width: 100px;
+        left: 5%;
+    }
+    .top-right img {
+        height: 30px;
+        width: 32px;  
+    }
+    .text {
+        font-size: 0.8em;
+    }
+
+    nav li {
+        font-size: 1.1em ;
+    }
+    nav ul {
+        margin-top: 25px;
+    }
+    .store-navigation li {
+        font-size: 0.9em;
+        padding: 8px 0.9%;
+    }
+    .reviews {
+        display: unset;
+    }
+}
+
+/* Increase sizes for larger screens (over 1000px)*/
+@media (min-width: 1000px){
+    header h1 {
+        font-size: 2.5em;
+        
+    }
+    header h2 {
+        font-size: 1.8em;
+    }
+    nav li {
+        font-size: 1.5em ;
+    }
+    .store-navigation li {
+        font-size: 1em;
+        padding: 8px 1.8%;
+    }
+    .main-storefront h3 {
+        font-size: 1.5em;
+    }
+    .news {
+        display: unset;
+    }
+    .featured {
+        flex: 3;
+    }
+}
