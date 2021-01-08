@@ -92,7 +92,6 @@ main {
 .main-storefront img {
     width: 100%;
     margin-top: -12%;   /*remove the green playbox bars from the tops of the game images*/
-    filter: blur(4px);
 }
 
 .main-storefront span {
