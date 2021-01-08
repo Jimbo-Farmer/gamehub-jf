@@ -4,14 +4,6 @@
   }
 
 
-body {
-    margin: 0px;
-    background-color: black;
-}
-
-
-
-
 /* ------------------------------------------------------Main------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------*/
 
@@ -117,8 +109,29 @@ main {
     color: white;
     margin: 12px 0 24px 0; 
     overflow: hidden; 
+    position: relative;
     }
 
+.item-information {
+    position: absolute;
+    top: 2%;
+    z-index: 1500;
+    text-align: left;
+    margin: 5px 5% 0 5%;
+    display: none;
+}
+
+
+.item-info-show div{
+    display: block;
+}
+
+.image-blur img {
+    transition-property: all;
+    transition-duration: 0.5s;
+    filter: blur(10px) brightness(50%);
+    
+}
 
 .featured {
     flex: 4;
