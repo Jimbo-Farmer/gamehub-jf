@@ -34,7 +34,7 @@ main {
     font-size: 0.7em;
 }
 
-#search {
+#store-search {
     -webkit-appearance: none;
     position: fixed;
     bottom: 0;
@@ -46,7 +46,7 @@ main {
      
 }
 
-#search input {
+#store-search input {
     -webkit-appearance: none;   /* overrides iphone and ipad styling which was rounding all corners of search input*/
     height: 25px;
     padding: 0;

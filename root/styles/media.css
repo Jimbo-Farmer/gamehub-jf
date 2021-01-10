@@ -93,10 +93,10 @@
 
 
     /* main changes -------------------------- */
-    #search {
+    #store-search {
         position: relative;
     }
-    #search input {
+    #store-search input {
         width: 18vw;
         margin: 0 0 0 10px;
         height: 60%;
