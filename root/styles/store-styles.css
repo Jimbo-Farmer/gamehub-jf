@@ -50,10 +50,12 @@ main {
     -webkit-appearance: none;   /* overrides iphone and ipad styling which was rounding all corners of search input*/ 
     height: 25px;
     padding: 0;
+    margin-bottom: 10px;
     border-radius: 10px 0px 0px 10px;
     width: 40vw;
     border: 1px solid black;
     border-right: none;
+
 }
 
 #search-button {
@@ -66,7 +68,6 @@ main {
     background-repeat: no-repeat;
     position: relative;
     top: 7px;
-    top: -webkit-9px;
     background-color: white;
     border-left: none;
     border-radius: 0 10px 10px 0;
