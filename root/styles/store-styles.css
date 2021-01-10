@@ -46,6 +46,7 @@ main {
 
 #store-search input {
     display: inline;
+    float: left;
     height: 25px;
     padding: 0;
     border-radius: 10px 0px 0px 10px;
@@ -62,6 +63,7 @@ main {
 
 #search-button {
     display: inline-block;
+    float: left;
     height: 23.4px;
     width: 28px;
     background: url("../icons and logos/search-icon.png") center;
@@ -72,6 +74,7 @@ main {
     /* top: 7px; */
     background-color: white;
     border-left: none;
+    margin-top: 6px;
     border-radius: 0 10px 10px 0;
     -webkit-transform: scale(1); transform: scale(1);
      
