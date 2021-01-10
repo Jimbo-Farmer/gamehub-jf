@@ -57,7 +57,24 @@ header a {                              /*  remove hyperlink look */
 }
 
 .top-right {
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(3,142,255,0.7);
+    width: 100%;
+    border: solid 3px white;
+    z-index: 2000;
+}
+.text {
     display: none;
+}
+.top-right div {
+    display: inline;
+}
+
+.top-right a {
+    height: 30px;
+    width: 32px;
+    padding: 10px;
 }
     
 .hamburger, .showClose {
@@ -115,24 +132,6 @@ nav li a {
     border: solid 3px #FF9AD7;
 }
 
-
-
-/* account, cart, search at bottom of screen */
-.mobile-tr {
-    display: inline;
-    position: fixed;
-    bottom: 0;
-    background-color: rgba(3,142,255,0.7);
-    width: 100%;
-    border: solid 3px white;
-}
-
-.mobile-tr .account-mobile, .mobile-tr .cart-mobile {
-    height: 30px;
-    width: 32px;
-    padding: 10px;
-}
-    
 
 
 /* -----------------------------------------------------------Footer-------------------------------------------------

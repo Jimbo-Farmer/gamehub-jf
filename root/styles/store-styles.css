@@ -42,7 +42,7 @@ main {
     padding: 0;
     height: 38px;
     margin: auto 10px auto 0px;
-    z-index: 1000;   
+    z-index: 2001;   
 }
 
 #search input {

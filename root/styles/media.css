@@ -4,7 +4,7 @@
 
     /* header changes -------------------------- */
 
-    .hamburger, .showClose, .mobile-tr {           /*  remove hamburger menu */
+    .hamburger, .showClose {           /*  remove hamburger menu */
         display: none;
     }
     header {
@@ -23,18 +23,29 @@
         right: 4%;
         top: 25px; 
         text-align: right;
+        background-color: unset;
+        border: none;
+        width: auto;
     }
     .text {
+        display: unset;
         position: relative;
         bottom: 10px;
         right: 5%;
         font-size: 0.6em; 
     }
+    .top-right div {
+        display: block;
+    }
     .top-right img {
         height: 22px;
         width: 20px;
-        padding-bottom: 5px;
+        padding-bottom:5px;
     }
+    .top-right a {
+        padding: 0;
+    }
+
     .logo img {
         min-width: 80px;
     }
