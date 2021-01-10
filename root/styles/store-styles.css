@@ -45,6 +45,7 @@ main {
 }
 
 #search input {
+    -webkit-appearance: none;     /*overrides iphone and ipad styling*/
     height: 25px;
     border-radius: 10px 0px 0px 10px;
     width: 40vw;
@@ -65,13 +66,13 @@ main {
     background-color: white;
     border-left: none;
     border-radius: 0 10px 10px 0;
-    -webkit-appearance: none;  
+     
 }
 
-.store-navigation input {
-    -webkit-appearance: none;     /*overrides iphone and ipad styling*/
+/* .store-navigation input {
+    
     border-radius: 10px;
-}
+} */
 
 .this-page a {
     text-decoration: underline;
