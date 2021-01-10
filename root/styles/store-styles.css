@@ -53,14 +53,14 @@ main {
     border: 1px solid black;
     border-right: none;
     position: relative;
-    top: 7px;
+    top: 6px;
     -webkit-appearance: none;   /* overrides iOS styling which was rounding all corners of search input*/ 
    
 }
 
 #search-button {
     display: inline-block;
-    height: 24.2px;
+    height: 23.4px;
     width: 28px;
     background: url("../icons and logos/search-icon.png") center;
     background-size: 80%;
