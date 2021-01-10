@@ -45,7 +45,6 @@ main {
 }
 
 #store-search input {
-    display: inline;
     float: left;
     height: 25px;
     padding: 0;
@@ -62,7 +61,7 @@ main {
 }
 
 #search-button {
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
     height: 23.4px;
     width: 28px;

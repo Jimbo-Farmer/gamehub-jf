@@ -98,7 +98,7 @@
     }
     #store-search input {
         width: 18vw;
-        margin: 0 0 0 10px;
+        margin-left: 10px;
     }
    
     .main-storefront h3 {
@@ -173,9 +173,6 @@
         font-size: 0.9em;
         padding: 8px 0.9%;
     }
-    #store-search input{
-        top: 3px;
-    }
 
     .reviews {
         display: unset;
@@ -201,9 +198,7 @@
     .main-storefront h3 {
         font-size: 1.5em;
     }
-    #search-button {
-        top: 1.5px;
-    }
+   
     .news {
         display: unset;
     }
