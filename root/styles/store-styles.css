@@ -64,11 +64,12 @@ main {
     top: 7px;
     background-color: white;
     border-left: none;
-    border-radius: 0 10px 10px 0;  
+    border-radius: 0 10px 10px 0;
+    -webkit-appearance: none;  
 }
 
 .store-navigation input {
-    -webkit-appearance: none;
+    -webkit-appearance: none;     /*overrides iphone and ipad styling*/
     border-radius: 10px;
 }
 
