@@ -68,6 +68,7 @@ main {
 }
 
 .store-navigation input {
+    -webkit-appearance: none;
     border-radius: 10px;
 }
 
