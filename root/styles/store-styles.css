@@ -45,7 +45,7 @@ main {
 }
 
 #search input {
-    -webkit-appearance: none;     /*overrides iphone and ipad styling*/
+    /*-webkit-appearance: none;     overrides iphone and ipad styling*/
     height: 25px;
     border-radius: 10px 0px 0px 10px;
     width: 40vw;
