@@ -127,10 +127,10 @@ nav li a {
     border: solid 3px white;
 }
 
-.mobile-tr a {
+.mobile-tr .account-mobile, .mobile-tr .cart-mobile {
     height: 30px;
     width: 32px;
-    padding: 5px 10px;
+    padding: 10px;
 }
     
 
