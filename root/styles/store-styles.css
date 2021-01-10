@@ -34,7 +34,6 @@ main {
 }
 
 #store-search {
-    /* -webkit-appearance: none; */
     position: fixed;
     bottom: 0;
     right: 0;
@@ -42,13 +41,13 @@ main {
     height: 38px;
     margin: auto 10px auto 0px;
     z-index: 2001; 
-     
+    -webkit-transform: scale(1); transform: scale(1)
 }
 
 #store-search input {
     display: inline-block;
     height: 25px;
-    /* padding: 0; */
+    padding: 0;
     border-radius: 10px 0px 0px 10px;
     width: 40vw;
     border: 1px solid black;
