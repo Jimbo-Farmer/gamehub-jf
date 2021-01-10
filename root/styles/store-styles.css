@@ -41,7 +41,7 @@ main {
     height: 38px;
     margin: auto 10px auto 0px;
     z-index: 2001; 
-    -webkit-transform: scale(1); transform: scale(1)
+    -webkit-transform: scale(1); transform: scale(1);
 }
 
 #store-search input {
@@ -55,6 +55,7 @@ main {
     position: relative;
     top: 6px;
     -webkit-appearance: none;   /* overrides iOS styling which was rounding all corners of search input*/ 
+    -webkit-transform: scale(1); transform: scale(1);
    
 }
 
@@ -71,6 +72,7 @@ main {
     background-color: white;
     border-left: none;
     border-radius: 0 10px 10px 0;
+    -webkit-transform: scale(1); transform: scale(1);
      
 }
 
