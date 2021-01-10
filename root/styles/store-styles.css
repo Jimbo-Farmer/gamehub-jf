@@ -45,7 +45,7 @@ main {
 }
 
 #store-search input {
-    display: inline-block;
+    display: inline;
     height: 25px;
     padding: 0;
     border-radius: 10px 0px 0px 10px;
@@ -53,7 +53,8 @@ main {
     border: 1px solid black;
     border-right: none;
     position: relative;
-    top: 6px;
+    /* top: 6px; */
+    margin-top: 6px;
     -webkit-appearance: none;   /* overrides iOS styling which was rounding all corners of search input*/ 
     -webkit-transform: scale(1); transform: scale(1);
    
