@@ -174,8 +174,12 @@
         padding: 8px 0.9%;
     }
     #store-search input{
-        top: 4px;
+        top: 3px;
     }
+    #search-button{
+        height: 23.4px;
+    }
+
     .reviews {
         display: unset;
     }
@@ -199,6 +203,9 @@
     }
     .main-storefront h3 {
         font-size: 1.5em;
+    }
+    #search-button {
+        top: 2px;
     }
     .news {
         display: unset;
