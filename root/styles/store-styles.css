@@ -42,12 +42,14 @@ main {
     padding: 0;
     height: 38px;
     margin: auto 10px auto 0px;
-    z-index: 2001;   
+    z-index: 2001; 
+     
 }
 
 #search input {
     -webkit-appearance: none;   /* overrides iphone and ipad styling which was rounding all corners of search input*/
     height: 25px;
+    padding: 0;
     border-radius: 10px 0px 0px 10px;
     width: 40vw;
     border: 1px solid black;
@@ -63,7 +65,7 @@ main {
     border: 1px solid black;
     background-repeat: no-repeat;
     position: relative;
-    top: 7px;
+    top: 10px;
     background-color: white;
     border-left: none;
     border-radius: 0 10px 10px 0;
