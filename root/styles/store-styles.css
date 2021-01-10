@@ -30,12 +30,11 @@ main {
     font-family: "ArialRounded", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     padding: 8px 0.45%;
-    vertical-align: top;
     font-size: 0.7em;
 }
 
 #store-search {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     position: fixed;
     bottom: 0;
     right: 0;
@@ -49,7 +48,7 @@ main {
 #store-search input {
     display: inline-block;
     height: 25px;
-    padding: 0;
+    /* padding: 0; */
     border-radius: 10px 0px 0px 10px;
     width: 40vw;
     border: 1px solid black;
