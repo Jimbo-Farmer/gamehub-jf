@@ -47,29 +47,29 @@ main {
 }
 
 #store-search input {
-    
+    display: inline-block;
     height: 25px;
     padding: 0;
     border-radius: 10px 0px 0px 10px;
     width: 40vw;
     border: 1px solid black;
     border-right: none;
-    position: absolute;
-    bottom: 10px;
+    position: relative;
+    top: 7px;
     -webkit-appearance: none;   /* overrides iOS styling which was rounding all corners of search input*/ 
-    -webkit-bottom: 50px;    
+   
 }
 
 #search-button {
     display: inline-block;
-    height: 22.8px;
+    height: 24.2px;
     width: 28px;
     background: url("../icons and logos/search-icon.png") center;
     background-size: 80%;
     border: 1px solid black;
     background-repeat: no-repeat;
     position: relative;
-    top: 7px;
+    /* top: 7px; */
     background-color: white;
     border-left: none;
     border-radius: 0 10px 10px 0;

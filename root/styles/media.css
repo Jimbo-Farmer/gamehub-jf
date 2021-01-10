@@ -99,7 +99,6 @@
     #store-search input {
         width: 18vw;
         margin: 0 0 0 10px;
-        height: 60%;
     }
    
     .main-storefront h3 {
@@ -120,10 +119,7 @@
         font-weight: bold;
     }
 
-    #search-button {
-        height: 21.5px;
-        top: 6px;
-    }
+    
 
 
 
@@ -176,6 +172,9 @@
     .store-navigation li {
         font-size: 0.9em;
         padding: 8px 0.9%;
+    }
+    #store-search input{
+        top: 4px;
     }
     .reviews {
         display: unset;
