@@ -47,17 +47,17 @@ main {
 }
 
 #store-search input {
-    -webkit-appearance: none;   /* overrides iOS styling which was rounding all corners of search input*/ 
+    
     height: 25px;
     padding: 0;
-    /* margin-bottom: 10px; */
     border-radius: 10px 0px 0px 10px;
     width: 40vw;
     border: 1px solid black;
     border-right: none;
-    position: relative;
-    bottom: 2px;
-
+    position: absolute;
+    bottom: 10px;
+    -webkit-appearance: none;   /* overrides iOS styling which was rounding all corners of search input*/ 
+    -webkit-bottom: 50px;    
 }
 
 #search-button {
