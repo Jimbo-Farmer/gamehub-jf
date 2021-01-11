@@ -1,8 +1,8 @@
-/* Drop mobile features for screens wider than 600px -----------------------------------------------------------------------------------*/
 
-@media (min-width: 600px){
 
-    /* header changes -------------------------- */
+@media (min-width: 600px){              /* Drop mobile features for screens wider than 600px --*/
+
+    /* header changes: ------ */
 
     .hamburger, .showClose {           /*  remove hamburger menu */
         display: none;
@@ -17,11 +17,11 @@
     header h2 {
         font-size: 1.1em;
     }
-    .top-right {                                    /*repostion account and cart to top right*/
+    .top-right {                       /*repostion account and cart to top right*/
         display: block;
         position: absolute;
-        right: 4%;
-        top: 25px; 
+        right: 2.5%;
+        top: 20px; 
         text-align: right;
         background-color: unset;
         border: none;
@@ -49,7 +49,8 @@
     .logo img {
         min-width: 80px;
     }
-    nav {
+
+    nav {                              /*  Reposition and style nav bar */
         height: auto;
         position: relative;
         top: auto;
@@ -68,7 +69,7 @@
         display: inline-block;
         width: 19.9%;               /*leave room for border widths, therefore not 20%*/
         margin: 0;
-        font-size: 0.8em;
+        font-size: 0.9em;
         padding: 5px 0;
         border-bottom: solid 3px white;
         
@@ -94,11 +95,19 @@
 
     /* main changes -------------------------- */
     #store-search {
-        position: relative;
+        position: absolute;
+        bottom: unset;
+        top: 0px;
+        margin: 0;
+        right: 2.2%;
+
     }
     #store-search input {
         width: 18vw;
-        margin-left: 10px;
+        top: 5px;
+    }
+    #search-button {
+        top: 5px;
     }
    
     .main-storefront h3 {
@@ -113,15 +122,27 @@
     .store-navigation a {
         transition-property: all;
         transition-duration: 0.2s;
-        
+        position: relative;
+        top: 10px;        
     }
+    .store-navigation li {
+        font-size: 0.8em;
+        padding: 0 1%;
+    }
+
     .store-navigation a:hover {
         font-weight: bold;
     }
-
-    
-
-
+    .search-results p {
+        font-size: 1em;
+        
+    }
+    .search-item-information p{
+        margin: 15px;
+    }
+    .result-item img {
+        float: left;
+    }
 
     /* footer changes */
 
@@ -194,6 +215,7 @@
     .store-navigation li {
         font-size: 1em;
         padding: 8px 1.8%;
+        
     }
     .main-storefront h3 {
         font-size: 1.5em;
