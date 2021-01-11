@@ -128,10 +128,11 @@
         transition-property: all;
         transition-duration: 0.2s;
         position: relative;
-        top: 10px;        
+        top: 10px; 
+        font-size: 0.8em;       
     }
     .store-navigation li {
-        font-size: 0.8em;
+        
         padding: 0 1%;
     }
 
