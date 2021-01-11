@@ -1,3 +1,8 @@
+@media (min-width: 400px){ 
+    .pcgames .featured-item {
+        width: 45%;
+    }
+}
 
 
 @media (min-width: 600px){              /* Drop mobile features for screens wider than 600px --*/
@@ -133,16 +138,28 @@
     .store-navigation a:hover {
         font-weight: bold;
     }
+
     .search-results p {
-        font-size: 1em;
-        
+        font-size: 1em;   
     }
+
     .search-item-information p{
         margin: 15px;
     }
+
     .result-item img {
         float: left;
     }
+
+    .pcgames .featured-item {
+        width: 22%;
+    }
+    .pcgames {
+        padding: 0;
+    }
+
+    
+
 
     /* footer changes */
 
@@ -226,5 +243,8 @@
     }
     .featured {
         flex: 3;
+    }
+    .pcgames{
+        flex: 4;
     }
 }

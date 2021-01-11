@@ -1,0 +1,11 @@
+.featured-item {
+    margin: 1%;
+    float: left;
+}
+.pcgames .item-information p {
+    font-size: 0.8em;
+}
+
+.news{
+    display: none;
+}
