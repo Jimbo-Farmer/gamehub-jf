@@ -1,8 +1,8 @@
-/* @media (min-width: 400px){ 
+@media (min-width: 400px){ 
     .pcgames .featured-item {
         width: 45%;
     }
-} */
+}
 
 
 @media (min-width: 600px){              /* Drop mobile features for screens wider than 600px --*/
