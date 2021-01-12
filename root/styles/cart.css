@@ -1,0 +1,19 @@
+main {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.summary {
+    margin: auto;
+    font-size: 0.7em;
+}
+
+td {
+    padding: 5px 5px;
+    vertical-align: top;
+}
+
+#remove {
+    color: red;
+    text-align: center;
+}
