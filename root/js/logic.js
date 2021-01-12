@@ -19,12 +19,12 @@ var itemInfo = document.querySelector(".featured-item .item-information")
 
 
 for (var i = 0; i < items.length; i++) {
-items[i].addEventListener("click", toggleItemInfo)
-function toggleItemInfo(){
-  // item.classList.toggle("show-item-info")
-  this.classList.toggle("item-info-show")
-  this.classList.toggle("image-blur")
+  items[i].addEventListener("click", toggleItemInfo)
+  function toggleItemInfo(){
+    this.classList.toggle("item-info-show")
+    this.classList.toggle("image-blur")
+  }
 }
-}
+
 
 

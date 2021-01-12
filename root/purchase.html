@@ -34,7 +34,7 @@
             
             <div class="cart">
                 <a class="text" href="cart.html">Cart & Checkout </a>
-                <a  href="cart.html"><img src="icons and logos/basket-icon.png" alt="Basket Icon"></a> 
+                <a  href="cart.html"><img id="basket" src="icons and logos/basket-icon.png" alt="Basket Icon"></a> 
             </div>
         </section>
 
@@ -106,8 +106,10 @@
                     <h3>Featured</h3>
                     <div class="featured-item item-info-show image-blur">
                         <img src="images/GameHub_covers5.jpg" alt="Assassin Game">
+                        <a class="exit" href="index.html"><img src="icons and logos/exit-button.png" alt="Exit Button"></a>
                         <div class="item-information">
                             <h5>ASSASSIN</h5>
+                            
                             <section class="selectors">
                                 <label for="platform">Select platform:</label>
                                     <select name="platform" id="platform">
@@ -130,9 +132,14 @@
                             </section>
                             
                             <div class="cta-button">
-                                <a href=""><img  src="icons and logos/buy-button.png" alt="add to cart button"></a>
-                                <p>Add to cart</p>
-                            </div>                      
+                                <p class="price">$30</p>
+                                <img id="add"  src="icons and logos/add-to-cart-button.png" alt="add to cart button">
+                                <p class="prompt">Add to cart</p>
+                            </div>   
+                            
+                            <div>
+                                <a class="proceed" href="cart.html">Proceed to Checkout</a>
+                            </div>
 
                         </div>
                     </div>
@@ -202,6 +209,6 @@
   
     
 
-<!-- <script src="js/logic.js"></script> -->
+<script src="js/purchase-logic.js"></script>
 </body>
 </html>

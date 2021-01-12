@@ -1,3 +1,7 @@
+.item-information {
+    width: 90%;
+}
+
 .selectors select {
     display: block;
     margin: 4px 0 10px 0;
@@ -8,6 +12,7 @@
 }
 
 #platform, #format, #neworused {
+    font-size: 1em;
     width: 60%;
     background-image: url("../icons and logos/dropdown-arrow.png");
     background-repeat: no-repeat;
@@ -15,4 +20,48 @@
     background-position-x: 90%;
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+
+.exit img {
+    filter: none;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 15%;
+    right: 8%;
+    z-index: 2002;
+}
+
+.price {
+    float: left;
+    margin-left: 0;
+}
+
+#hide {
+    visibility: hidden;
+}
+
+.cta-button {
+    margin: 40px 0 40px 10%;
+}
+
+.proceed {
+    visibility: hidden;
+}
+
+.show-proceed {
+    display: block;
+    clear: both;
+    width: 50%;
+    visibility: visible;
+    margin-left: 10%;
+    color: white;
+    border: 1px solid cyan;
+    border-radius: 15px;
+    background-color: black;
+    padding: 3px 8px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 2px 2px 1px rgb(0, 187, 187);
+    
 }
