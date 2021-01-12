@@ -1,0 +1,18 @@
+.selectors select {
+    display: block;
+    margin: 4px 0 10px 0;
+    border-radius: 3px;
+    border: 1px solid cyan;
+    color: white;
+    background-color: black;
+}
+
+#platform, #format, #neworused {
+    width: 60%;
+    background-image: url("../icons and logos/dropdown-arrow.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 90%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
