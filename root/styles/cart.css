@@ -1,15 +1,41 @@
 main {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 90%, rgba(3,142,255,1) 100%, rgba(3,142,255,1) 100%);
+    padding: 0 5%;
+}
+
+h3 {
+    text-transform: uppercase;
+    padding-top: 12px;
+    margin-top: 0;
+}
+
+
+
+h4 {
+    margin: 12px 0 6px 0;
 }
 
 .summary {
-    margin: auto;
+    background-color: white;
+    color: black;
+    width: 100%;
+    border-radius: 6px;
+    max-width: 800px;
     font-size: 0.7em;
 }
 
+
 td {
-    padding: 5px 5px;
+    padding: 0 5px;
+}
+.column-headers {
+    text-decoration: underline;
+
+}
+.item-info td {
+    padding: 5px;
     vertical-align: top;
 }
 
@@ -17,3 +43,54 @@ td {
     color: red;
     text-align: center;
 }
+
+.total td {
+    font-weight: bold;
+}
+
+
+#delivery-details {
+    max-width: 800px;
+}
+
+form div {
+    margin: 6px 5% 0 0;
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+}
+
+label, form p {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.form-input, .payment-options {
+    display: block;
+    width: 100%;
+    
+}
+
+.payment-options {
+    height: 12px;
+    width: 110px;
+    border: 2px solid cyan;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin: 6px;
+}
+
+.payment-radio input {
+    display: none;
+}
+
+.payment-radio input[type="radio"]:checked + label {
+    background-color: rgba(3,142,255,1);
+  }
+
+.payment-radio div {
+      display: inline-block;
+  }
+
+
+
