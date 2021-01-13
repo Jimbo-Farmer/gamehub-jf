@@ -11,10 +11,13 @@ h3 {
     margin-top: 0;
 }
 
-
-
 h4 {
-    margin: 12px 0 6px 0;
+    margin: 12px 0 6px 12px;
+}
+
+#cart-summary, #page-title, .checkout-success {
+    width: 100%;
+    max-width: 826px;   /* some added to bring it inling with elements that have max-width 800px plus padding and border*/
 }
 
 .summary {
@@ -22,18 +25,18 @@ h4 {
     color: black;
     width: 100%;
     border-radius: 6px;
-    max-width: 800px;
     font-size: 0.7em;
+    padding: 12px;
 }
-
 
 td {
     padding: 0 5px;
 }
+
 .column-headers {
     text-decoration: underline;
-
 }
+
 .item-info td {
     padding: 5px;
     vertical-align: top;
@@ -49,15 +52,24 @@ td {
 }
 
 
-#delivery-details {
+#delivery-details, #payment-method, #billing-address {
     max-width: 800px;
 }
 
-form div {
+#delivery-details div, .card-details div {
     margin: 6px 5% 0 0;
     display: inline-block;
     width: 100%;
     max-width: 200px;
+}
+
+#payment-method .payment-radio {
+    max-width: 800px;
+}
+
+#payment-method .payment-radio div{
+    margin: 0;
+    text-align: center;
 }
 
 label, form p {
@@ -85,7 +97,7 @@ label, form p {
 }
 
 .payment-radio input[type="radio"]:checked + label {
-    background-color: rgba(3,142,255,1);
+    background-color: rgba(3,142,255,1);            /* change colour of label when checked */
   }
 
 .payment-radio div {
@@ -93,4 +105,58 @@ label, form p {
   }
 
 
+fieldset {
+    border-radius: 6px;
+    margin: 24px 0;
+}
+legend {
+    font-weight: bold;
+}
 
+
+#payment-method .expiry, #payment-method .cvc {
+    width: 110px;
+    float: left;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 24px auto 48px auto;
+    padding: 6px 16px;                 /*create variable for cta*/
+    border: 2px solid cyan;         /*create variable for cta*/
+    color: white;                   /*create variable for cta*/
+    font-weight: bold;                /*create variable for cta*/
+    border-radius: 15px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 60%, rgba(3,142,255,1) 100%, rgba(3,142,255,1) 100%); ;
+}
+
+.checkout-success p {
+    font-size: 0.7rem;
+    margin: 6px 0 6px 12px;
+}
+.checkout-success a {
+    text-decoration: none;
+    color: cyan;
+}
+
+.success-main {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 75%, rgba(3,142,255,1) 100%, rgba(3,142,255,1) 100%);
+}
+
+
+@media (min-width: 600px) {
+    #cart-summary, #delivery-details, #payment-method, #page-title, #billing-address, .checkout-success {
+    margin: 0 auto 24px auto;
+    }
+    .summary, label, .form p, .checkout-success p {
+        font-size: 1rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+    .payment-options {
+        width: 150px;
+        height: 16px;
+    }
+    
+}

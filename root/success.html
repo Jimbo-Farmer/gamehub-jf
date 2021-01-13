@@ -51,11 +51,19 @@
 
     </header>
 
-    <main>
+    <main class="success-main">
     
     <div id="page-title">
         <h3>Cart & Checkout</h3>
     </div>
+
+
+    <section class="checkout-success">
+        <p>Purchase Complete!</p>
+        <p>Confirmation has been sent to you@tyrannicaltechgiant.com</p>
+        <p>Now sit back and relax, or, return to <a href="index.html">store.</a></p>
+        
+    </section>
 
     <section id="cart-summary">
         <h4>Cart summary</h4>
@@ -73,7 +81,7 @@
                     <td>Playstation, physical copy</td>
                     <td>1</td>
                     <td>$30</td>
-                    <td id="remove">X</td>
+                    <td id="remove"></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -100,93 +108,8 @@
         </table>
     </section>
 
+
     
-    <form class="" action="success.html" method="POST">
-        <fieldset id="delivery-details">
-            <legend>Delivery details</legend>
-            <div>
-                <label for="address-line-1">Address Line 1</label>
-                <input type="text" name="address-line-1" id="address-line-1" class="form-input">
-            </div>
-            <div>
-                <label for="address-line-2">Address Line 2</label>
-                <input type="text" name="address-line-2" id="address-line-2" class="form-input">
-            </div>
-            <div>
-                <label for="city">City</label>
-                <input type="text" name="city" id="city" class="form-input">
-            </div>
-            <div>
-                <label for="zip-code">Zip/Postal Code</label>
-                <input type="text" name="zip-code" id="zip-code" class="form-input">
-            </div>
-            <div>
-                <label for="country">Country</label>
-                <input type="text" name="country" id="country" class="form-input">
-            </div>
-            <div>
-                <p>(International shipping $12)</p>
-            </div>
-        </fieldset>
-
-        <fieldset id="payment-method">
-            <legend>Payment method</legend>
-            <div class="payment-radio">
-                <div>
-                    <input type="radio" name="payment" value="card" id="card">
-                    <label class="payment-options" for="card">Credit/Debit Card </label>
-                </div>
-                <div>
-                    <input type="radio" name="payment" value="paypal" id="paypal">
-                    <label class="payment-options" for="paypal">Paypal</label>
-                </div>
-                <div>
-                    <input type="radio" name="payment" value="bitcoin" id="bitcoin">
-                    <label class="payment-options" for="bitcoin">Bitcoin</label>
-                </div>
-            </div>
-            <div class="card-details">
-                <div>
-                    <label for="card-number">Card Number</label>
-                    <input type="text" name="card-number" id="card-number" class="form-input">
-                </div>
-                <div>
-                    <label for="holders-name">Card Holder's Name</label>
-                    <input type="text" name="holders-name" id="holders-name" class="form-input">
-                </div>
-                <section>
-                    <div class="expiry">
-                        <label for="expiry-date">Expiry Date</label>
-                        <input type="date" name="expiry-date" id="expiry-date" class="form-input" placeholder="mm/yy">
-                    </div>
-                    <div class="cvc">
-                        <label for="cvc">CVC Code</label>
-                        <input type="text" name="cvc" id="cvc" class="form-input" maxlength="3">
-                    </div>
-                </section>   
-            </div>
-        </fieldset>
-
-        <fieldset id="billing-address">
-            <legend>Billing address</legend>
-            <div>
-                <label for="same-address">Same as delivery address?</label>
-                <input type="checkbox" name="same-address" id="same-address" class="check"  checked>
-            </div>
-            <div>
-                <label for="terms">Accept terms and conditions?</label>
-                <input type="checkbox" name="terms" id="terms" class="check">
-            </div>
-        </fieldset>
-        <input type="submit" value="Complete Purchase">
-    </form>
-
-    <section class="checkout-success hidden">
-        <p>Purchase Complete!</p>
-        <p>Confirmation has been sent to you@tyrannicaltechgiant.com</p>
-        <p>Now sit back and relax, or, return to <a href="index.html">store.</a></p>
-        
-    </section>
 
 
    
@@ -198,7 +121,6 @@
 
 
     <footer>
-
         <section class="quick-links">
             <div id="legal">
                 <p>Terms and Conditions</p>
@@ -218,14 +140,9 @@
             <p> </p>
 
         </section>
-        
         <!-- <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div> -->
-
-
     </footer>
-  
     
-
 <script src="js/logic.js"></script>
 </body>
 </html>

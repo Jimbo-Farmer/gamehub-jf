@@ -63,7 +63,7 @@ header a {                              /*  remove hyperlink look */
     background-color: rgba(3,142,255,0.7);
     width: 100%;
     border: solid 3px white;
-    z-index: 2000;
+    z-index: 5000;
 }
 .text {
     display: none;
