@@ -53,23 +53,29 @@
 
     <main>
         <form action="" onsubmit="return false">  
-            <h3>Already a member? Login here</h3>
+            <h3>Want to join? Create an account here</h3>
             <fieldset id="user-details">
-                <div class="username">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="user" class="form-input">
+                <div class="user-create">
+                    <label for="username">Create username</label>
+                    <input type="text" name="user-create" id="user-create" class="form-input">
                 </div>
-                <div class="password">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" class="form-input">
+                <div class="password-create">
+                    <label for="password-create">Create password</label>
+                    <input type="password" name="password-create" id="password-create" class="form-input">
+                </div>
+                <div class="password-confirm">
+                    <label for="password-confirm">Confirm password</label>
+                    <input type="password" name="password-confirm" id="password-confirm" class="form-input">
+                </div>
+                <div class="email">
+                    <label for="email-new">Email address</label>
+                    <input type="email" name="email-new" id="email-new" class="form-input">
                 </div>
                 <div>
-                    <input type="submit" value="Login">
+                    <input type="submit" value="Sign Up">
                 </div>
             </fieldset>
-            <h3>Want to join? Fill out this short <a href="signup.html">form</a></h3>
         </form>
-        
     </main>
 
 

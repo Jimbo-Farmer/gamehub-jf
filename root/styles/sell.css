@@ -7,10 +7,15 @@ main {
 
 form {
     max-width: 400px;
+    margin: auto;
+}
+fieldset {
+    border-radius: 6px;
 }
 
 h3 {
     text-transform: uppercase;          /*make variable - cart and sell*/
+    font-size: 0.9rem;
     padding-top: 12px;
     margin-top: 0;
 }
@@ -47,6 +52,52 @@ label span {
     font-weight: normal;
     border-radius: 6px;
     padding: 2px;
-    font-size: 0.9rem;
+    font-size: 0.9rem;  
+}
+
+.price {
+    max-width: 100px;
+}
+
+.send input {
+    display: block;
+    margin: 6px auto;
+}
+
+.animate input {
+    animation-name: rotate;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
     
+  }
+  
+  @keyframes rotate {
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+  }
+
+
+    .sound {
+        display: block;
+    }
+
+  .hidden {
+      display: none;
+  }
+
+  input[type="submit"] {
+    display: block;
+    margin: 24px auto 24px auto;
+    padding: 6px 16px;                 /*create variable for cta*/
+    border: 2px solid cyan;         /*create variable for cta*/
+    color: white;                   /*create variable for cta*/
+    font-weight: bold;                /*create variable for cta*/
+    border-radius: 15px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 60%, rgba(3,142,255,1) 100%, rgba(3,142,255,1) 100%); ;
+}
+
+h3 a {
+    text-decoration: none;
+    color: cyan;
 }

@@ -195,12 +195,17 @@
 
 
     /* footer changes */
-
+    footer {
+        text-align: center;
+    }
     .quick-links div {
         display: inline-block;
         margin: 0;
     }
     .quick-links {
+        width: 100%;
+        max-width: 800px;
+        display: unset;
         text-align: center;
     }
     #legal {

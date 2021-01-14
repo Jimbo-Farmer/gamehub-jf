@@ -47,7 +47,7 @@
     </header>
 
     <main>
-        <form action="">
+        <form action="" onsubmit="return false">  <!-- return false stops submission and page refresh which allows the animation to work -->
             <h3>Sell sell sell! Enter game details below</h3>
             <fieldset id="game-details">
                 <div class="game-name">
@@ -82,8 +82,20 @@
                     <label for="description">Description</label>
                     <textarea name="description" id="description" cols="30" rows="10" class="form-input"></textarea> 
                 </div>
+                <div class="price">
+                    <label for="selling-price">Selling Price</label>
+                    <input type="text" name="selling-price" id="selling-price" class="form-input">
+                </div>
+                <div class="terms">
+                    <label for="terms">Accept T's & C's?</label>
+                    <input type="checkbox" name="terms" id="terms" class="check" required>
+                </div>
+                <div class="send">
+                    <label class="submit-message" for="send">Send to marketplace</label>
+                    <input type="image" name="send" id="send" src="icons and logos\sell-icon.png" alt="submit button">
+                    <embed class="sound hidden" src="sounds/coin-sound.mp3" type="">   <!--    works in chrome, not firefox, not sure about safari -->
+                </div>
 
-               
             </fieldset>
 
 
