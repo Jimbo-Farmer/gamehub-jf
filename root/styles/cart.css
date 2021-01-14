@@ -6,7 +6,7 @@ main {
 }
 
 h3 {
-    text-transform: uppercase;
+    text-transform: uppercase;          /*make variable - cart and sell*/
     padding-top: 12px;
     margin-top: 0;
 }
@@ -77,7 +77,8 @@ label, form p {
     font-weight: bold;
 }
 
-.form-input, .payment-options {
+.form-input, .payment-options {         /*make variable*/
+    border-radius: 6px;
     display: block;
     width: 100%;
     
@@ -88,7 +89,6 @@ label, form p {
     width: 110px;
     border: 2px solid cyan;
     padding: 3px 8px;
-    border-radius: 6px;
     margin: 6px;
 }
 
@@ -109,6 +109,7 @@ fieldset {
     border-radius: 6px;
     margin: 24px 0;
 }
+
 legend {
     font-weight: bold;
 }
@@ -144,19 +145,3 @@ input[type="submit"] {
 }
 
 
-@media (min-width: 600px) {
-    #cart-summary, #delivery-details, #payment-method, #page-title, #billing-address, .checkout-success {
-    margin: 0 auto 24px auto;
-    }
-    .summary, label, .form p, .checkout-success p {
-        font-size: 1rem;
-    }
-    h4 {
-        font-size: 1.2rem;
-    }
-    .payment-options {
-        width: 150px;
-        height: 16px;
-    }
-    
-}

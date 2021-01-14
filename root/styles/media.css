@@ -97,6 +97,21 @@
         background-color:  #6000A9; 
     }
 
+    .here#news {
+        border-bottom: solid 3px #6000A9;  
+        background-color:  #6000A9; 
+    }
+    .here#support {
+        border-bottom: solid 3px #6000A9;  
+        background-color:  #6000A9; 
+    }
+    .here#login {
+        border-bottom: solid 3px #6000A9;  
+        background-color:  #6000A9; 
+    }
+
+
+
 
     /* main changes -------------------------- */
     #store-search {
@@ -157,6 +172,23 @@
     }
     .pcgames {
         padding: 0;
+    }
+
+
+
+    /* changes to checkout     */
+    #cart-summary, #delivery-details, #payment-method, #page-title, #billing-address, .checkout-success {
+        margin: 0 auto 24px auto;
+    }
+    .summary, label, .form p, .checkout-success p {
+        font-size: 1rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+    .payment-options {
+            width: 150px;
+            height: 16px;
     }
 
     
