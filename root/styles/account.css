@@ -10,9 +10,11 @@ main {
     padding: 0 5%;
 }
 
-h3 {
-    margin-top: 0;
+#all-details h2 {
+    font-family: "ArialRounded";
+    margin: 0;
     padding-top: 24px;
+    text-transform: uppercase;
 }
 
 td {
@@ -26,6 +28,7 @@ td {
 
 h3 span {
     color: cyan;
+    font-size: 0.8rem;
 }
 
 #account-main section h3 {
@@ -33,10 +36,46 @@ h3 span {
     background-image: url("../icons and logos/dropdown-arrow.png");
     background-repeat: no-repeat;
     background-position-x: 2%;
-    background-position-y: 85%;
+    background-position-y: 60%;
     
 }
 
-#delete {
+.delete {
     color: red;
 }
+.wishlist .delete {
+    min-width: 50px;
+    text-align: center;
+}
+
+.add {
+    text-align: center;
+    margin-right: 12px;
+    padding: 3px 8px;                 /*create variable for cta*/
+    border: 2px solid cyan;         /*create variable for cta*/
+    color: white;                   /*create variable for cta*/
+    font-weight: bold;                /*create variable for cta*/
+    border-radius: 15px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 60%, rgba(3,142,255,1) 100%, rgba(3,142,255,1) 100%);
+}
+
+.basic-info {
+    position: relative;
+}
+
+.basic-info img {
+    max-height: 140px;
+    border: 1px solid white;
+    border-radius: 6px;
+}
+
+
+
+table {
+    margin-left: 5%;
+}
+
+td {
+    vertical-align: top;
+}
+
