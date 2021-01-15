@@ -103,8 +103,8 @@
         background-color:  #6000A9; 
     }
     .here#support {
-        border-bottom: solid 3px #6000A9;  
-        background-color:  #6000A9; 
+        border-bottom: solid 3px rgba(3,142,255,1);  
+        background-color:  rgba(3,142,255,1); 
     }
     .here#login {
         border-bottom: solid 3px #6000A9;  
@@ -345,7 +345,7 @@
 
     /*account page limit width of details*/
     #all-details {
-        width: 50%;   
+        width: 55%;   
     }
 
 }

@@ -13,16 +13,16 @@ function toggleHamburger(){
 
 //account expand logic - not DRY at all!
 var info = document.querySelector(".basic-info");
-var click = document.querySelector(".basic-info h3");
+var click = document.querySelector(".basic-info h4");
 click.addEventListener("click", toggleExpand1)
 function toggleExpand1(){
   info.classList.toggle("collapse")
 
 }
 var wish = document.querySelector(".wishlist");
-var wishclick = document.querySelector(".wishlist h3");
+var wishclick = document.querySelector(".wishlist h4");
 wishclick.addEventListener("click", toggleExpand2)
 function toggleExpand2(){
   wish.classList.toggle("collapse")
-
 }
+

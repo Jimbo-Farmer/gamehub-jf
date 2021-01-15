@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Visit GameHub to Buy and Sell video games on all platforms">
     <link rel="stylesheet" href="styles/header-footer.css">
-    <link rel="stylesheet" href="styles/store-styles.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/account.css">
     <link rel="stylesheet" href="styles/media.css">
     <title>GameHub Support</title>
 </head>
@@ -41,22 +42,58 @@
 
         <nav class="navbar">  <!-- Have to format it like this as otherwise firefox creates whitespace between list items -->
             <ul>
-                <li class="here" id="store"><a href="index.html">Store</a></li
-                ><li class="right-of-here" id="sell"><a href="sell.html">Sell</a></li
+                <li  id="store"><a href="index.html">Store</a></li
+                ><li id="sell"><a href="sell.html">Sell</a></li
                 ><li id="news"><a href="news.html">News</a></li
-                ><li id="support"><a href="support.html">Support</a></li
+                ><li class="here" id="support"><a href="support.html">Support</a></li
                 ><li id="login"><a href="login.html">Login/Signup</a></li>
             </ul>
         </nav>
 
     </header>
 
-    <main>
-   
+    <main id="support-main">
+        <section>
+            <h3>Support</h3>
+            <section class="contact-form collapse">
+                <h4 id="click">Contact form</h4>
+                <fieldset id="contact">
+                    <div class="your-name">
+                        <label for="your-name">Your name</label>
+                        <input type="text" name="your-name" class="form-input">
+                    </div>
+                    <div class="email">
+                        <label for="email-new">Email address</label>
+                        <input type="email" name="email-new" id="email-new" class="form-input">
+                    </div>
+                    <div class="message">
+                        <label for="message">Enter your message here</label>
+                        <textarea name="message"  cols="30" rows="5" class="form-input"></textarea> 
+                    </div>
+                    <div>
+                        <input type="submit" value="Send">
+                    </div>
+                </fieldset>
+                  
+            </section>
 
-
-
-
+            <section>
+                <h4>Seller support</h4>           
+            </section>
+            <section>
+                <h4>Delivery information</h4>            
+            </section>
+            <section>
+                <h4>Technical support</h4>            
+            </section>
+            <section>
+                <h4>Terms and Conditions</h4>            
+            </section>
+            <section>
+                <h4>FAQs</h4>            
+            </section>
+            
+        </section>
     </main>
 
 
@@ -91,6 +128,6 @@
   
 
 
-<script src="js/logic.js"></script>
+<script src="js/support-logic.js"></script>
 </body>
 </html>

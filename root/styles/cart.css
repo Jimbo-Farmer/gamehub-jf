@@ -135,7 +135,7 @@ input[type="submit"] {
     color: white;                   /*create variable for cta*/
     font-weight: bold;                /*create variable for cta*/
     border-radius: 15px;
-    background: linear-gradient(0deg, rgba(0,0,0,1) 60%, rgba(3,142,255,1) 100%, rgba(3,142,255,1) 100%); ;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 60%, rgba(3,142,255,1) 100%, rgba(3,142,255,1) 100%);
 }
 
 .checkout-success p {

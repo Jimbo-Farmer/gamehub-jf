@@ -10,10 +10,10 @@ main {
     padding: 0 5%;
 }
 
-#all-details h2 {
+main h3 {
     font-family: "ArialRounded";
     margin: 0;
-    padding-top: 24px;
+    padding-top: 12px;
     text-transform: uppercase;
 }
 
@@ -26,12 +26,12 @@ td {
     overflow: hidden;
 }
 
-h3 span {
+h4 span {
     color: cyan;
     font-size: 0.8rem;
 }
 
-#account-main section h3 {
+#account-main section h4 , #support-main section h4{
     padding-left: 36px;
     background-image: url("../icons and logos/dropdown-arrow.png");
     background-repeat: no-repeat;
@@ -69,8 +69,6 @@ h3 span {
     border-radius: 6px;
 }
 
-
-
 table {
     margin-left: 5%;
 }
@@ -79,3 +77,13 @@ td {
     vertical-align: top;
 }
 
+#contact {
+    margin-top: 20px;
+    margin-bottom: 24px;
+}
+#support-main h4 {
+    padding: 0;
+}
+#support-main .collapse {
+    height: 30px;
+}
