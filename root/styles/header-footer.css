@@ -78,6 +78,9 @@ header a {                              /*  remove hyperlink look */
     width: 32px;
     padding: 10px;
 }
+.top-right img {
+    margin-top: 2px;
+}
     
 .hamburger, .showClose {
     display: block;
