@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Visit GameHub to Buy and Sell video games on all platforms">
     <link rel="stylesheet" href="styles/header-footer.css">
-    <link rel="stylesheet" href="styles/sell.css">
+    <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/media.css">
     <title>GameHub Home</title>
 </head>
@@ -51,7 +51,7 @@
 
     </header>
 
-    <main>
+    <main id="login-main">
         <form action="" onsubmit="return false">  
             <h3>Already a member? Login here</h3>
             <fieldset id="user-details">
@@ -63,11 +63,15 @@
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" class="form-input">
                 </div>
+                <div class="remember">
+                    <label for="remember">Remember me</label>
+                    <input type="checkbox" name="remember" id="remember" class="form-input" required>
+                </div>
                 <div>
                     <input type="submit" value="Login">
                 </div>
             </fieldset>
-            <h3>Want to join? Fill out this short <a href="signup.html">form</a></h3>
+            <h3 id="signup-prompt">Want to join? Fill out this short <a href="signup.html">form</a></h3>
         </form>
         
     </main>

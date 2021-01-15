@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Visit GameHub to Buy and Sell video games on all platforms">
     <link rel="stylesheet" href="styles/header-footer.css">
-    <link rel="stylesheet" href="styles/sell.css">
+    <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/media.css">
     <title>GameHub Home</title>
 </head>
@@ -51,10 +51,11 @@
 
     </header>
 
-    <main>
+    <main id="signup-main">
         <form action="" onsubmit="return false">  
-            <h3>Want to join? Create an account here</h3>
-            <fieldset id="user-details">
+            
+            <fieldset id="signup-details">
+                <h3>Want to join? Create an account here</h3>
                 <div class="user-create">
                     <label for="username">Create username</label>
                     <input type="text" name="user-create" id="user-create" class="form-input">
@@ -71,11 +72,23 @@
                     <label for="email-new">Email address</label>
                     <input type="email" name="email-new" id="email-new" class="form-input">
                 </div>
+                <div class="remember">
+                    <label for="remember">Remember me</label>
+                    <input type="checkbox" name="remember" id="remember" class="form-input" required>
+                </div>
                 <div>
                     <input type="submit" value="Sign Up">
                 </div>
             </fieldset>
         </form>
+        <section id="member-benefits">
+            <h3>Member benefits</h3>
+            <p>Sell games! - You need to be a member to sell games on GameHub</p>
+            <p>Receive special offers and recommendations tailored to you. </p>
+            <p>Speedy checkout - no need to enter the same details every time you buy a game.</p>
+            <p>Developing your own indie game? Publish it on GameHub!</p>
+            <p>Several other awesome and convincing reasons...</p>
+        </section>
     </main>
 
 

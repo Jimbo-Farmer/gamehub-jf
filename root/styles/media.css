@@ -31,6 +31,7 @@
         background-color: unset;
         border: none;
         width: auto;
+        height: 100px;
     }
     .text {
         display: unset;
@@ -192,7 +193,47 @@
     }
 
     
+    /* changes to form layout on sell page and login page */
+    #sell-main form, #login-main form {
+        width: 66%;
+        max-width: 800px;
 
+        
+    }
+    #game-details label {
+        font-size: 1.2rem;
+    }
+    #sell-form h3 {
+        font-size: 1.2rem;
+    }
+    .price {
+        max-width: 150px;
+        display: inline-block;
+    }
+    
+    /* changes to form layout on signup page */
+    
+    #signup-main {
+        display: flex;  
+    }
+    #signup-main form {
+        max-width: 624px;
+        margin-right: 0;
+    }
+
+    #signup-details {  
+        flex: 3;
+        margin-right: 24px;
+        max-width: 600px;
+
+    }
+
+    #member-benefits {
+        padding-top: 12px;
+        margin-left: 24px;
+        flex: 2;
+        max-width: 400px;
+    }
 
     /* footer changes */
     footer {
@@ -246,20 +287,50 @@
         margin-top: 25px;
     }
 
-    /* .store-navigation a {
-        font-size: 0.9em;
-    } */
     .store-navigation li {
         font-size: 0.9em;
         padding: 8px 0.9%;
     }
-    /* .store-navigation a {
-        font-size: 0.9em;
-    } */
 
     .reviews {
         display: unset;
     }
+
+    /* switch to grid layout on sell form */
+    #game-details .game-name {grid-area: title;}
+    #game-details .condition-radio {grid-area: condition;}
+    #game-details .image-upload {grid-area: image;}
+    #game-details .description {grid-area: description;}
+    #game-details .price {grid-area: price;}
+    #game-details .terms {grid-area: terms;}
+    #game-details .send {grid-area: send;}
+
+    #game-details {
+        display: grid;
+        grid-template-areas:
+        'title title'
+        'condition image'
+        'description description'
+        'price terms'
+        'send send';
+    }
+    #game-details .terms input{
+        display: block;
+        margin: 6px;
+        height: 18px;
+        width: 18px;
+    }
+    #game-details .game-name {
+        max-width: 400px;
+    }
+
+    #game-details .send {
+        text-align: center;
+    }
+    .image-upload p{
+        display: inline-block;
+    }
+
 }
 
 /* Increase sizes for larger screens (over 1000px)*/

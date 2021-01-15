@@ -28,6 +28,11 @@ for (var i = 0; i < items.length; i++) {
 
 
 
+
+
+
+
+
 // add animate class to coin on posting of sale item
 
 var coin = document.querySelector(".send")
@@ -40,3 +45,6 @@ function toggleAnimate(){
   sound.classList.toggle("hidden")
   submitMessage.textContent = "Sent!";
 }
+
+
+

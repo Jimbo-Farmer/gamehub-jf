@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Visit GameHub to Buy and Sell video games on all platforms">
     <link rel="stylesheet" href="styles/header-footer.css">
-    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="styles/account.css">
     <link rel="stylesheet" href="styles/media.css">
     <title>GameHub Home</title>
 </head>
@@ -32,7 +32,7 @@
             
             <div class="cart">
                 <a class="text" href="cart.html">Cart & Checkout </a>
-                <a  href="cart.html"><img src="icons and logos/full-basket.png" alt="Basket Icon"></a> 
+                <a  href="cart.html"><img src="icons and logos/basket-icon.png" alt="Basket Icon"></a> 
             </div>
         </section>
 
@@ -51,68 +51,58 @@
 
     </header>
 
-    <main class="success-main">
-    
-    <div id="page-title">
-        <h3>Cart & Checkout</h3>
-    </div>
-
-
-    <section class="checkout-success">
-        <p>Purchase Complete!</p>
-        <p>Confirmation has been sent to you@tyrannicaltechgiant.com</p>
-        <p>Now sit back and relax, or, return to <a href="index.html">store.</a></p>
-        
-    </section>
-
-    <section id="cart-summary">
-        <h4>Cart summary</h4>
-        <table class="summary">  
-            <tbody>
-                <tr class="column-headers">
-                    <td>Item</td>
-                    <td>Description</td>
-                    <td>Qty</td>
-                    <td>Price</td>
-                    <td></td>
-                </tr>
-                <tr class="item-info">
-                    <td>Assassin</td>
-                    <td>Playstation, physical copy</td>
-                    <td>1</td>
-                    <td>$30</td>
-                    <td id="remove"></td>
+    <main id="account-main">
+        <section class="basic-info collapse">
+            <h3 id="click">Basic Info <span>(edit)</span></h3>
+            <table>
+                <tr>
+                    <td>First name: </td>
+                    <td>Super</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>Subtotal</td>
-                    <td></td>
-                    <td>$30</td>
-                    <td></td>
+                    <td>Last name:</td>
+                    <td>Mario</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>Shipping</td>
-                    <td></td>
-                    <td>$5</td>
-                    <td></td>
+                    <td>Username:</td>
+                    <td>Maribro</td>
                 </tr>
-                <tr class="total">
-                    <td></td>
-                    <td>Total</td>
-                    <td></td>
-                    <td>$35</td>
-                    <td></td>
+                <tr>
+                    <td>Email:</td>
+                    <td>sm@ninten.do</td>
                 </tr>
-            </tbody>          
-        </table>
-    </section>
+                <tr>
+                    <td>DOB:</td>
+                    <td>09.07.1981</td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td>Japan</td>
+                </tr>
+            </table>
+            
+        </section>
+
+        <section class="wishlist collapse">
+            <h3>Wishlist</h3>            
+        </section>
+        <section class="delivery-details collapse">
+            <h3>Delivery details</h3>            
+        </section>
+        <section class="payment-details collapse">
+            <h3>Payment details</h3>            
+        </section>
+        <section class="security collapse">
+            <h3>Security</h3>            
+        </section>
+        <section class="preferences collapse">
+            <h3>Preferences</h3>            
+        </section>
+        <section class="delete collapse">
+            <h3 id="delete">Delete account</h3>            
+        </section>
 
 
-    
-
-
-   
     </main>
 
 
@@ -121,6 +111,7 @@
 
 
     <footer>
+
         <section class="quick-links">
             <div id="legal">
                 <p>Terms and Conditions</p>
@@ -140,9 +131,12 @@
             <p> </p>
 
         </section>
+        
         <!-- <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div> -->
     </footer>
-    
-<script src="js/logic.js"></script>
+  
+
+
+<script src="js/account-logic.js"></script>
 </body>
 </html>
