@@ -1,0 +1,76 @@
+
+#alien-attack {
+    width: 90%;
+    max-width: 528px;
+    margin: 48px auto;
+}
+
+
+.alien {
+    animation-name: arms;
+    animation-duration: 1.2s;
+    height: 744px;
+    width: /*528px;*/ 100%;
+    background-color: black;
+    animation-iteration-count: infinite;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+
+}
+
+@keyframes arms {
+    0% {background-image: url('../images/space-invader-up.png');}
+    50% {background-image: url('../images/space-invader-down.png');}
+    100% {background-image: url('../images/space-invader-up.png');}
+}
+
+#fire-button {
+    position: absolute;
+    bottom: 100px;
+    left: 228px;
+}
+.missile {
+    position: absolute;
+    bottom: 210px;
+    left: 254px;
+    z-index: -1;
+}
+
+#shoot {
+    animation-name: shoot;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+@keyframes shoot {
+    5% {
+        bottom: 230px;
+        z-index: 1;
+    }
+    100% {
+        bottom: 500px;
+        
+    }
+}
+
+.explode {
+    animation-name: explode;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    height: 744px;
+    width: /*528px;*/ 100%;
+    background-color: black;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-image: url('../images/space-invader-up.png');
+}
+
+@keyframes explode{
+    5%  {   background-image: url('../images/exploding.png');}
+    95% {   background-image: url('../images/exploded.png');}
+    100% { display: none;}
+}

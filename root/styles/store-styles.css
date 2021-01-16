@@ -16,7 +16,7 @@ main {
 
 .store-navigation ul {
     margin-top: 0;
-    padding: 0;
+    padding: 10px 0;
     list-style-type: none;    /*Remove bullet points*/   
 }
 
@@ -42,8 +42,8 @@ main {
     padding: 0;
     height: 38px;
     margin: auto 10px auto 0px;
-    z-index: 2001; 
-    -webkit-transform: scale(1); transform: scale(1);
+    z-index: 5000; 
+    /* -webkit-transform: scale(1); transform: scale(1); */
 }
 
 #store-search input {
@@ -54,11 +54,10 @@ main {
     width: 40vw;
     border: 1px solid black;
     border-right: none;
-    position: relative;
-    /* top: 6px; */
+    /* position: relative; */
     margin-top: 6px;
     -webkit-appearance: none;   /* overrides iOS styling which was rounding all corners of search input*/ 
-    -webkit-transform: scale(1); transform: scale(1);
+    /* -webkit-transform: scale(1); transform: scale(1); */
    
 }
 
@@ -70,12 +69,12 @@ main {
     background-size: 80%;
     border: 1px solid black;
     background-repeat: no-repeat;
-    position: relative;
+    /* position: relative; */
     background-color: white;
     border-left: none;
     margin-top: 6px;
     border-radius: 0 10px 10px 0;
-    -webkit-transform: scale(1); transform: scale(1);
+    /* -webkit-transform: scale(1); transform: scale(1); */
      
 }
 

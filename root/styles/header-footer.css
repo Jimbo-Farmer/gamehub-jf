@@ -18,7 +18,7 @@ body {
 header {
     
     background: rgb(0,0,0);
-    background: linear-gradient(22deg, rgba(0,0,0,1) 60%, rgba(3,142,255,1) 100%, rgb(3, 142, 255) 100%);
+    background: linear-gradient(22deg, rgba(0,0,0,1) 60%, rgba(3,142,255,1) 100%, rgb(3, 142, 255) 100%); /*darker than in xd to comply with WCAG*/
     color: white;
     font-family: "ArialRounded", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
