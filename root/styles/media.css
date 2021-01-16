@@ -75,7 +75,7 @@
         display: inline-block;
         width: 19.9%;               /*leave room for border widths, therefore not 20%*/
         margin: 0;
-        font-size: 0.9em;
+        font-size: 0.9rem;
         padding: 5px 0;
         border-bottom: solid 3px white;
         
