@@ -347,6 +347,17 @@
         width: 55%;   
     }
 
+    #alien-attack {
+        display: flex;
+        max-width: 850px;
+        margin: auto;
+    }
+    #alien-attack article {
+        flex: 1;
+        margin: 24px;
+        max-width: 400px;
+    }
+
 }
 
 /* Increase sizes for larger screens (over 1000px)*/

@@ -1,3 +1,5 @@
+@import "imports/header-footer.css";
+
 @font-face {
     font-family: "ArialRounded";
     src: url("Arial Rounded MT Std Bold.ttf") format("truetype");
@@ -20,19 +22,17 @@ main {
     list-style-type: none;    /*Remove bullet points*/   
 }
 
-.store-navigation a {
-    text-decoration: none;    /*Remove hyperlink underline*/ 
-    color: white; 
-}
-
-
 .store-navigation li {
     display: inline;
     font-family: "ArialRounded", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     padding: 0 0.45%;
-    font-size: 0.7em;
-    
+    font-size: 0.7rem;  
+}
+
+.store-navigation a {
+    text-decoration: none;    /*Remove hyperlink underline*/ 
+    color: white; 
 }
 
 #store-search {
@@ -43,7 +43,6 @@ main {
     height: 38px;
     margin: auto 10px auto 0px;
     z-index: 5000; 
-    /* -webkit-transform: scale(1); transform: scale(1); */
 }
 
 #store-search input {
@@ -54,10 +53,9 @@ main {
     width: 40vw;
     border: 1px solid black;
     border-right: none;
-    /* position: relative; */
     margin-top: 6px;
     -webkit-appearance: none;   /* overrides iOS styling which was rounding all corners of search input*/ 
-    /* -webkit-transform: scale(1); transform: scale(1); */
+    
    
 }
 
@@ -69,20 +67,11 @@ main {
     background-size: 80%;
     border: 1px solid black;
     background-repeat: no-repeat;
-    /* position: relative; */
     background-color: white;
     border-left: none;
     margin-top: 6px;
     border-radius: 0 10px 10px 0;
-    /* -webkit-transform: scale(1); transform: scale(1); */
-     
 }
-
-.this-page a {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
 
 .main-storefront section {
     padding: 0 2.5%;
@@ -132,13 +121,13 @@ main {
 .item-information p, .item-information h5 {
     margin: 5px 0;
 }
+
 .item-information h5 {
     font-size: 1.1em;
 }
 
 .item-info-show div{
-    display: block;
-    
+    display: block;   
 }
 
 .image-blur img {
