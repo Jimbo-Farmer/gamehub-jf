@@ -139,4 +139,12 @@ h3 a {
 
 #signup-prompt {
     margin: 24px 0;
+    border: var(--common-border);
+    border-radius: 6px;
+    text-align: center;
+    padding: 12px;
+}
+
+#login-main input {
+    max-width: 400px;
 }
