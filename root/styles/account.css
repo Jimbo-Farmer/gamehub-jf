@@ -53,10 +53,10 @@ h4 span {
 .add {
     text-align: center;
     margin-right: 12px;
-    padding: 3px 8px;                 /*create variable for cta*/
-    border: 2px solid cyan;         /*create variable for cta*/
-    color: white;                   /*create variable for cta*/
-    font-weight: bold;                /*create variable for cta*/
+    padding: var(--cta-padding);                 
+    border: var(--cta-border);         
+    color: white;                   
+    font-weight: bold;                
     border-radius: 15px;
     background: linear-gradient(0deg, rgba(0,0,0,1) 60%, rgba(3,142,255,1) 100%, rgba(3,142,255,1) 100%);
 }
@@ -83,9 +83,11 @@ td {
     margin-top: 20px;
     margin-bottom: 24px;
 }
+
 #support-main h4 {
     padding: 0;
 }
+
 #support-main .collapse {
     height: 22.4px;
 }
