@@ -131,17 +131,17 @@ main h1 {
 .hide-info {
     position: absolute;
     border: unset;
-    right: 10%;
-    bottom: 5%;
+    right: 2%;
+    top: 0;
     transform: rotate(180deg);
     background-color: transparent;
     z-index: 1000;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
 }
 
-    /* position: absolute;
-    
-    width: 0px;
-    height: 0px;
-    border: 12px solid transparent;
-    border-top-color: #f62681;
-    background-color: thistle; */
+.hide-info:hover {
+    background-color: #f62681;
+}

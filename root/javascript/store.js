@@ -14,7 +14,7 @@ function gameHtml(siteSection, i, className){
         <button class="add-to-cart" data-gameid=${gamesList[i].id}>Add to cart</button>
       </div>
     </div>
-    <button class="hide-info"><img src="icons and logo/dropdown.png" alt="hide info"></img></button>
+    <button class="hide-info" onclick="event.stopPropagation()"><img src="icons and logo/exit-button.png" alt="hide info"></img></button>
   </div>
   `
 }
@@ -35,8 +35,7 @@ function resetText(button){
   purchaseComplete = true;
   button.innerHTML =`add to cart`;
   button.classList.remove("confirmation");
-  button.closest(".featured-item").classList.remove("extra-info-show");
-  console.log(button.closest(".featured-item"));
+  // button.closest(".featured-item").classList.remove("extra-info-show");
 }
 
 const mobileCart = document.querySelector(".mobile-cart-container");
@@ -107,20 +106,20 @@ for (let i = 0; i < items.length; i++) {
   function toggleItemInfo(){
     items[i].classList.add("extra-info-show");
     addToCart[i].disabled = false;
+    // hideInfo[i].disabled = false;
+    // hideInfo[i].style.display = "unset";
+  }
+}
+
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("click", toggleItemInfo)
+  function toggleItemInfo(){
+    items[i].classList.add("extra-info-show");
+    addToCart[i].disabled = false;
     hideInfo[i].disabled = false;
     hideInfo[i].style.display = "unset";
   }
 }
-
-// for (let i = 0; i < items.length; i++) {
-//   items[i].addEventListener("click", toggleItemInfo)
-//   function toggleItemInfo(){
-//     items[i].classList.add("extra-info-show");
-//     addToCart[i].disabled = false;
-//     hideInfo[i].disabled = false;
-//     hideInfo[i].style.display = "unset";
-//   }
-// }
 
 for (let i = 0; i < hideInfo.length; i++) {
   hideInfo[i].addEventListener("click", toggleItemInfo)
