@@ -91,7 +91,7 @@ let infoDisplay = false;
 
 
 for (let i = 0; i < items.length; i++) {
-  items[i].addEventListener("click", toggleItemInfo)
+  items[i].addEventListener("touchend", toggleItemInfo)
   function toggleItemInfo(){
     if(!infoDisplay){
       items[i].classList.add("extra-info-show");
@@ -107,8 +107,10 @@ for (let i = 0; i < items.length; i++) {
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("mouseenter", toggleItemInfo)
   function toggleItemInfo(){  
-    items[i].classList.add("extra-info-show");
-    infoDisplay = true;  
+    if(!infoDisplay){
+      items[i].classList.add("extra-info-show");
+      infoDisplay = true; 
+    }  
   }
 }
 
