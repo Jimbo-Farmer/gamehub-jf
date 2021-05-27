@@ -134,10 +134,17 @@ for (let i = 0; i < items.length; i++) {
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("keyup", function(e){
     if(e.keyCode === 13){
-      items[i].classList.toggle("extra-info-show");
-      addToCart[i].disabled = false;
-      addToCart.innerHTML = `Add to cart`;  
+      if(!infoDisplay){
+        items[i].classList.add("extra-info-show");
+        addToCart[i].disabled = false;
+        console.log(addToCart[i]);
+        infoDisplay = true;
+      } else if(infoDisplay && purchaseComplete){
+        items[i].classList.remove("extra-info-show");
+        addToCart.innerHTML = `Add to cart`;
+        addToCart[i].disabled = true;
+        infoDisplay = false;
+      } 
     }
   })
 }
-
