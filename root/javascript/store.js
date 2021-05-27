@@ -96,10 +96,10 @@ let items = document.querySelectorAll(".featured-item")
 
 
 for (let i = 0; i < items.length; i++) {
-  items[i].addEventListener("mousedown", toggleItemInfo)
+  items[i].addEventListener("mouseenter", toggleItemInfo)
   function toggleItemInfo(){
     if(purchaseComplete){
-      items[i].classList.toggle("extra-info-show");
+      items[i].classList.add("extra-info-show");
     }
   }
 }
