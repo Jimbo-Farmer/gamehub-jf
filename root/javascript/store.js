@@ -78,17 +78,17 @@ for (let i = 0; i < items.length; i++) {
     // addToCart.innerHTML = `Add to cart`;
   }
 }
-// for (let i = 0; i < items.length; i++) {
-//   items[i].addEventListener("mouseover", toggleItemInfo)
-//   function toggleItemInfo(){
-//     this.classList.add("extra-info-show");
-//   }
-// }
-// for (let i = 0; i < items.length; i++) {
-//   items[i].addEventListener("mouseout", toggleItemInfo)
-//   function toggleItemInfo(){
-//     this.classList.remove("extra-info-show");
-//     addToCart.innerHTML = `Add to cart`;
-//   }
-// }
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("mouseover", toggleItemInfo)
+  function toggleItemInfo(){
+    this.classList.add("extra-info-show");
+  }
+}
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("mouseout", toggleItemInfo)
+  function toggleItemInfo(){
+    this.classList.remove("extra-info-show");
+    addToCart.innerHTML = `Add to cart`;
+  }
+}
 
