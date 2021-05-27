@@ -89,6 +89,23 @@ addToCart.forEach(function(keypress){
 let items = document.querySelectorAll(".featured-item")
 let infoDisplay = false;
 
+
+
+
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("mouseover", toggleItemInfo)
+  function toggleItemInfo(){
+    this.classList.add("extra-info-show");
+  }
+}
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("mouseout", toggleItemInfo)
+  function toggleItemInfo(){
+    this.classList.remove("extra-info-show");
+    addToCart.innerHTML = `Add to cart`;
+  }
+}
+
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("click", toggleItemInfo)
   function toggleItemInfo(){
@@ -106,21 +123,4 @@ for (let i = 0; i < items.length; i++) {
     }
   })
 }
-
-
-for (let i = 0; i < items.length; i++) {
-  items[i].addEventListener("mouseover", toggleItemInfo)
-  function toggleItemInfo(){
-    this.classList.add("extra-info-show");
-  }
-}
-for (let i = 0; i < items.length; i++) {
-  items[i].addEventListener("mouseout", toggleItemInfo)
-  function toggleItemInfo(){
-    this.classList.remove("extra-info-show");
-    addToCart.innerHTML = `Add to cart`;
-  }
-}
-
-
 
