@@ -112,22 +112,23 @@ for (let i = 0; i < items.length; i++) {
   }
 }
 
-for (let i = 0; i < items.length; i++) {
-  items[i].addEventListener("click", toggleItemInfo)
-  function toggleItemInfo(){
-    items[i].classList.add("extra-info-show");
-    addToCart[i].disabled = false;
-    hideInfo[i].disabled = false;
-    hideInfo[i].style.display = "unset";
-  }
-}
-console.log(hideInfo)
+// for (let i = 0; i < items.length; i++) {
+//   items[i].addEventListener("click", toggleItemInfo)
+//   function toggleItemInfo(){
+//     items[i].classList.add("extra-info-show");
+//     addToCart[i].disabled = false;
+//     hideInfo[i].disabled = false;
+//     hideInfo[i].style.display = "unset";
+//   }
+// }
+
 for (let i = 0; i < hideInfo.length; i++) {
   hideInfo[i].addEventListener("click", toggleItemInfo)
   function toggleItemInfo(){
     hideInfo[i].closest(".featured-item").classList.remove("extra-info-show");
+    console.log(hideInfo[i].closest(".featured-item"))
     addToCart[i].disabled = true;
-    hideInfo[i].disabled = true;
+    // hideInfo[i].disabled = true;
     hideInfo[i].style.display = "none";
   }
 }
