@@ -14,7 +14,7 @@ function gameHtml(siteSection, i, className){
         <button class="add-to-cart" data-gameid=${gamesList[i].id}>Add to cart</button>
       </div>
     </div>
-    <span class="show-more"><img src="icons and logo/dropdown.png" alt="show more info"></img></span>
+    <button class="hide-info"><img src="icons and logo/dropdown.png" alt="show more info"></img></button>
   </div>
   `
 }
@@ -42,9 +42,14 @@ function resetText(button){
 const mobileCart = document.querySelector(".mobile-cart-container");
 const navBasket = document.querySelector("#basket");
 const addToCart = document.querySelectorAll(".add-to-cart");
+const hideInfo = document.querySelectorAll(".hide-info");
+
 for(let i = 0; i < addToCart.length; i++){
   addToCart[i].disabled = true;
+  hideInfo[i].disabled = true;
+  hideInfo[i].style.display = "none";
 }
+
 
 
 addToCart.forEach(function(button){
@@ -100,9 +105,30 @@ let items = document.querySelectorAll(".featured-item")
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("mouseenter", toggleItemInfo)
   function toggleItemInfo(){
-      items[i].classList.add("extra-info-show");
-      addToCart[i].disabled = false;
-    
+    items[i].classList.add("extra-info-show");
+    addToCart[i].disabled = false;
+    hideInfo[i].disabled = false;
+    hideInfo[i].style.display = "unset";
+  }
+}
+
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("click", toggleItemInfo)
+  function toggleItemInfo(){
+    items[i].classList.add("extra-info-show");
+    addToCart[i].disabled = false;
+    hideInfo[i].disabled = false;
+    hideInfo[i].style.display = "unset";
+  }
+}
+
+for (let i = 0; i < hideInfo.length; i++) {
+  hideInfo[i].addEventListener("click", toggleItemInfo)
+  function toggleItemInfo(){
+    items[i].classList.remove("extra-info-show");
+    addToCart[i].disabled = true;
+    hideInfo[i].disabled = true;
+    hideInfo[i].style.display = "none";
   }
 }
 
@@ -112,6 +138,8 @@ for (let i = 0; i < items.length; i++) {
     if(purchaseComplete){
       items[i].classList.remove("extra-info-show");
       addToCart[i].disabled = true;
+      hideInfo[i].disabled = true;
+      hideInfo[i].style.display = "none";
     } 
   }
 }
@@ -122,8 +150,12 @@ for (let i = 0; i < items.length; i++) {
         items[i].classList.toggle("extra-info-show");
         if(addToCart[i].disabled){
           addToCart[i].disabled = false;
+          hideInfo[i].disabled = false;
+          hideInfo[i].style.display = "unset";
         } else {
           addToCart[i].disabled = true;
+          hideInfo[i].disabled = true;
+          hideInfo[i].style.display = "none";
         }
       } 
     }   
