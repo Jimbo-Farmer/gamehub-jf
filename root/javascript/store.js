@@ -60,12 +60,22 @@ addToCart.forEach(function(button){
 //Game information display
 
 let items = document.querySelectorAll(".featured-item")
+let infoDisplay = false;
 
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("touchstart", toggleItemInfo)
   function toggleItemInfo(){
-    this.classList.toggle("extra-info-show");
-    addToCart.innerHTML = `Add to cart`;
+    if(!infoDisplay){
+      this.classList.add("extra-info-show");
+      addToCart.innerHTML = `Add to cart`;
+      infoDisplay = true;
+    } else {
+      this.classList.remove("extra-info-show");
+      infoDisplay = false;
+    }
+
+    // this.classList.toggle("extra-info-show");
+    // addToCart.innerHTML = `Add to cart`;
   }
 }
 for (let i = 0; i < items.length; i++) {
