@@ -119,13 +119,13 @@ for (let i = 0; i < items.length; i++) {
     if(e.keyCode === 13){
       if(purchaseComplete){
         items[i].classList.toggle("extra-info-show");
-        if(addToCart.disabled){
-          addToCart.disabled = false;
+        if(addToCart[i].disabled){
+          addToCart[i].disabled = false;
         } else {
-          addToCart.disabled = true;
+          addToCart[i].disabled = true;
         }
       } 
-    }
+    }   
   })
 }
 
