@@ -27,8 +27,10 @@ for(let i = 8; i>0 ; i--){
 // Add to cart
 let cartQuantity = 0;
 let cartItems = [];
+let purchaseComplete = true;
 
 function resetText(button){
+  purchaseComplete = true;
   button.innerHTML =`add to cart`;
   button.classList.remove("confirmation");
 }
@@ -39,6 +41,7 @@ const addToCart = document.querySelectorAll(".add-to-cart");
 
 addToCart.forEach(function(button){
   button.onmousedown = function(event){
+    purchaseComplete = false;
     cartQuantity += 1;
     this.innerHTML = `Added to cart!`;
     this.classList.add("confirmation");
@@ -58,7 +61,8 @@ addToCart.forEach(function(button){
 })
 
 addToCart.forEach(function(keypress){
-  keypress.onkeyup = function(e){
+  keypress.onkeypress = function(e){
+    purchaseComplete = false;
     if(e.keyCode ===13){
       cartQuantity += 1;
     this.innerHTML = `Added to cart!`;
@@ -88,8 +92,10 @@ let infoDisplay = false;
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("click", toggleItemInfo)
   function toggleItemInfo(){
-    this.classList.toggle("extra-info-show");
-    addToCart.innerHTML = `Add to cart`;
+    if(purchaseComplete){
+      items[i].classList.toggle("extra-info-show");
+      addToCart.innerHTML = `Add to cart`;
+    } 
   }
 }
 for (let i = 0; i < items.length; i++) {
@@ -100,17 +106,21 @@ for (let i = 0; i < items.length; i++) {
     }
   })
 }
-// for (let i = 0; i < items.length; i++) {
-//   items[i].addEventListener("mouseover", toggleItemInfo)
-//   function toggleItemInfo(){
-//     this.classList.add("extra-info-show");
-//   }
-// }
-// for (let i = 0; i < items.length; i++) {
-//   items[i].addEventListener("mouseout", toggleItemInfo)
-//   function toggleItemInfo(){
-//     this.classList.remove("extra-info-show");
-//     addToCart.innerHTML = `Add to cart`;
-//   }
-// }
+
+
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("mouseover", toggleItemInfo)
+  function toggleItemInfo(){
+    this.classList.add("extra-info-show");
+  }
+}
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("mouseout", toggleItemInfo)
+  function toggleItemInfo(){
+    this.classList.remove("extra-info-show");
+    addToCart.innerHTML = `Add to cart`;
+  }
+}
+
+
 
