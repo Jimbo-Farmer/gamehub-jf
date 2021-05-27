@@ -88,7 +88,7 @@ let infoDisplay = false;
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("click", toggleItemInfo)
   function toggleItemInfo(){
-    this.classList.add("extra-info-show");
+    this.classList.toggle("extra-info-show");
     addToCart.innerHTML = `Add to cart`;
   }
 }
