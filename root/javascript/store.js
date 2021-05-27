@@ -25,10 +25,19 @@ for(let i = 8; i>0 ; i--){
   gameHtml(featured, i, "featured");
 }
 
+const basketQty = JSON.parse(localStorage.getItem("numberOfItems"));
+if((!isNaN(basketQty) && basketQty > 0)){
+  var cartQuantity = basketQty;
+} else cartQuantity = 0;
 
+if(JSON.parse(localStorage.getItem("cartList"))){
+  var cartItems = JSON.parse(localStorage.getItem("cartList"));
+} else {
+  cartItems = [];
+}
 // Add to cart
-let cartQuantity = 0;
-let cartItems = [];
+
+// let cartItems = [];
 let purchaseComplete = true;
 
 function resetText(button){

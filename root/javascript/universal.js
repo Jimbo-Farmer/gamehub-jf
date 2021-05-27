@@ -20,9 +20,11 @@ function toggleHamburger(){
 
 const basketQty = JSON.parse(localStorage.getItem("numberOfItems"));
 const itemsCount = document.querySelector("#basket");
+const miniCart = document.querySelector(".mobile-cart-container");
 if((!isNaN(basketQty) && basketQty > 0)){
   itemsCount.innerHTML = `<span class="cart-quantity">${basketQty}</span>`;
+  miniCart.innerHTML = `<a href="checkout.html" class="mobile-cart">Cart <span class="cart-quantity">${basketQty}</span></a>`;
 };
-const miniCart = document.querySelector(".mobile-cart-container");
-miniCart.innerHTML = `<a href="checkout.html" class="mobile-cart">Cart <span class="cart-quantity">${basketQty}</span></a>`;
+
+
  
