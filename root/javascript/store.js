@@ -33,14 +33,16 @@ function resetText(button){
   purchaseComplete = true;
   button.innerHTML =`add to cart`;
   button.classList.remove("confirmation");
+  button.closest(".featured-item").classList.remove("extra-info-show");
+  console.log(button.closest(".featured-item"));
 }
 
 const mobileCart = document.querySelector(".mobile-cart-container");
 const navBasket = document.querySelector("#basket");
 const addToCart = document.querySelectorAll(".add-to-cart");
-for(let i = 0; i < addToCart.length; i++){
-  addToCart[i].disabled = true;
-}
+// for(let i = 0; i < addToCart.length; i++){
+//   addToCart[i].disabled = true;
+// }
 
 
 addToCart.forEach(function(button){
@@ -91,60 +93,41 @@ addToCart.forEach(function(keypress){
 //Game information display
 
 let items = document.querySelectorAll(".featured-item")
-let infoDisplay = false;
+
 
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("mousedown", toggleItemInfo)
   function toggleItemInfo(){
-    if(!infoDisplay){
-      items[i].classList.add("extra-info-show");
-      addToCart[i].disabled = false;
-      infoDisplay = true;
-    } else if(infoDisplay && purchaseComplete){
-      items[i].classList.remove("extra-info-show");
-      addToCart.innerHTML = `Add to cart`;
-      addToCart[i].disabled = true;
-      infoDisplay = false;
+    if(purchaseComplete){
+      items[i].classList.toggle("extra-info-show");
     }
   }
 }
 
 // for (let i = 0; i < items.length; i++) {
-//   items[i].addEventListener("mouseenter", toggleItemInfo)
-//   function toggleItemInfo(){  
-//     if(!infoDisplay){
-//       items[i].classList.add("extra-info-show");
-//       addToCart[i].disabled = false;
-//       console.log(addToCart[i].disabled);
-//       infoDisplay = true; 
-//     }  
-//   }
+//   items[i].addEventListener("keyup", function(e){
+//     if(e.keyCode === 13){
+//       if(purchaseComplete){
+//         items[i].classList.toggle("extra-info-show");
+//       } 
+//     }
+//   })
 // }
 
 // for (let i = 0; i < items.length; i++) {
-//   items[i].addEventListener("mouseleave", toggleItemInfo)
-//   function toggleItemInfo(){
-//     items[i].classList.remove("extra-info-show");
-//     addToCart.innerHTML = `Add to cart`;
-//     addToCart[i].disabled = true;
-//     console.log(addToCart[i].disabled);
-//     infoDisplay = false;
+//   items[i].addEventListener("mouseover", toggleItemInfo)
+//   function toggleItemInfo(){   
+//       items[i].classList.add("extra-info-show");  
 //   }
 // }
 
 for (let i = 0; i < items.length; i++) {
-  items[i].addEventListener("keyup", function(e){
-    if(e.keyCode === 13){
-      if(!infoDisplay){
-        items[i].classList.add("extra-info-show");
-        addToCart[i].disabled = false;
-        infoDisplay = true;
-      } else if(infoDisplay && purchaseComplete){
-        items[i].classList.remove("extra-info-show");
-        addToCart.innerHTML = `Add to cart`;
-        addToCart[i].disabled = true;
-        infoDisplay = false;
-      } 
-    }
-  })
+  items[i].addEventListener("mouseleave", toggleItemInfo)
+  function toggleItemInfo(){
+    if(purchaseComplete){
+      items[i].classList.remove("extra-info-show");
+    } 
+  }
 }
+
+
