@@ -99,11 +99,11 @@ for (let i = 0; i < items.length; i++) {
     if(!infoDisplay){
       items[i].classList.add("extra-info-show");
       addToCart[i].disabled = false;
-      console.log(addToCart[i]);
       infoDisplay = true;
     } else if(infoDisplay && purchaseComplete){
       items[i].classList.remove("extra-info-show");
       addToCart.innerHTML = `Add to cart`;
+      addToCart[i].disabled = true;
       infoDisplay = false;
     }
   }
@@ -115,7 +115,7 @@ for (let i = 0; i < items.length; i++) {
     if(!infoDisplay){
       items[i].classList.add("extra-info-show");
       addToCart[i].disabled = false;
-      console.log(addToCart[i]);
+      console.log(addToCart[i].disabled);
       infoDisplay = true; 
     }  
   }
@@ -127,6 +127,7 @@ for (let i = 0; i < items.length; i++) {
     items[i].classList.remove("extra-info-show");
     addToCart.innerHTML = `Add to cart`;
     addToCart[i].disabled = true;
+    console.log(addToCart[i].disabled);
     infoDisplay = false;
   }
 }
@@ -137,7 +138,6 @@ for (let i = 0; i < items.length; i++) {
       if(!infoDisplay){
         items[i].classList.add("extra-info-show");
         addToCart[i].disabled = false;
-        console.log(addToCart[i]);
         infoDisplay = true;
       } else if(infoDisplay && purchaseComplete){
         items[i].classList.remove("extra-info-show");
