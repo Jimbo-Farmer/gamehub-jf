@@ -224,9 +224,10 @@ a.here{
     color: black;
 }
 
-.featured-item:focus > .item-information {
-    background-color: lightgrey;
-    color: black;
+.featured-item:focus > .item-information > h4 {
+    font-weight: 700;
+    text-decoration: underline;
+    color: #f62681;
 }
 
 .add-to-cart:focus {

@@ -20,4 +20,7 @@ function toggleHamburger(){
 
 const basketQty = JSON.parse(localStorage.getItem("numberOfItems"));
 const itemsCount = document.querySelector("#basket");
-itemsCount.innerHTML = `<span class="cart-quantity">${basketQty}</span>`; 
+if((!isNaN(basketQty) && basketQty > 0)){
+  itemsCount.innerHTML = `<span class="cart-quantity">${basketQty}</span>`;
+};
+ 
