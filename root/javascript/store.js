@@ -4,17 +4,19 @@ const featured = document.querySelector(".featured");
 import { gamesList } from "./resources/products.js";
 
 function gameHtml(siteSection, i, className){
-  siteSection.innerHTML += `<div class="${className}-item" tabindex="0">
+  siteSection.innerHTML += `<div class="${className}-item">
   <img src="${gamesList[i].image}" alt="${gamesList[i].name}">
     <div class="item-information">
-      <h4>${gamesList[i].name}</h4>
+      <h4 tabindex="0">${gamesList[i].name}</h4>
       <div class="extra-information">
         <p>${gamesList[i].description}</p>
         <p class="price"><b>$${gamesList[i].price}</b></p>
         <button class="add-to-cart" data-gameid=${gamesList[i].id}>Add to cart</button>
       </div>
     </div>
-  </div>`
+    <span class="show-more"><img src="icons and logo/dropdown.png" alt="show more info"></img></span>
+  </div>
+  `
 }
 
 //Draw featured items on homepage
@@ -98,10 +100,9 @@ let items = document.querySelectorAll(".featured-item")
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("mouseenter", toggleItemInfo)
   function toggleItemInfo(){
-    if(purchaseComplete){
       items[i].classList.add("extra-info-show");
       addToCart[i].disabled = false;
-    }
+    
   }
 }
 
@@ -129,12 +130,6 @@ for (let i = 0; i < items.length; i++) {
   })
 }
 
-// for (let i = 0; i < items.length; i++) {
-//   items[i].addEventListener("mouseover", toggleItemInfo)
-//   function toggleItemInfo(){   
-//       items[i].classList.add("extra-info-show");  
-//   }
-// }
 
 
 
