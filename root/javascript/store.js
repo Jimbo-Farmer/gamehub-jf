@@ -62,7 +62,7 @@ addToCart.forEach(function(button){
 let items = document.querySelectorAll(".featured-item")
 
 for (let i = 0; i < items.length; i++) {
-  items[i].addEventListener("click", toggleItemInfo)
+  items[i].addEventListener("mousedown", toggleItemInfo)
   function toggleItemInfo(){
     this.classList.toggle("extra-info-show");
     addToCart.innerHTML = `Add to cart`;
