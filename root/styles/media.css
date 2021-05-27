@@ -1,399 +1,148 @@
-@media (min-width: 400px){ 
-    .pcgames .featured-item {
-        width: 47%;
+@media (min-width: 320px) and (max-width: 359px){
+    .headline h2 {
+        font-size: 1.7rem;
     }
 }
 
 
-@media (min-width: 600px){              /* Drop mobile features for screens wider than 600px --*/
-
-    /* header changes: ------ */
-
-    .hamburger, .showClose {           /*  remove hamburger menu */
-        display: none;
-    }
-    header {
-        padding-bottom: 0;
-        border: none;
-    }
-    header h1 {
-        font-size: 1.7em;
-    }
-    header h2 {
-        font-size: 1.1em;
-    }
-    .top-right {                       /*repostion account and cart to top right*/
-        display: block;
-        position: absolute;
-        right: 2.5%;
-        top: 20px; 
-        text-align: right;
-        background-color: unset;
-        border: none;
-        width: auto;
+@media (min-width: 600px){ 
+    .logo img, .hamburger img {
+        width: 105px;
         height: 60px;
     }
-    .text {
-        display: unset;
-        position: relative;
-        bottom: 10px;
-        right: 5%;
-        font-size: 0.6em; 
-    }
-    .top-right div {
-        display: block;
-    }
-    .top-right img {
-        height: 22px;
-        width: 20px;
-        padding-bottom:5px;
-    }
-    .top-right a {
-        padding: 0;
-    }
-
-    .logo img {
-        min-width: 80px;
-    }
-
-    nav {                              /*  Reposition and style nav bar */
-        height: auto;
-        position: relative;
-        top: auto;
-        right: auto;
-        background-color: unset;
-        clear: left;
-        text-align: center;
-            
-    }
-    nav ul {
-        padding: 0;
-        margin-bottom: 0;
-    }
-
-    nav li {
-        display: inline-block;
-        width: 19.9%;               /*leave room for border widths, therefore not 20%*/
-        margin: 0;
-        font-size: 0.9rem;
-        padding: 5px 0;
-        border-bottom: solid 3px white;
-        
-    }
-    .here {                         /* Add a box around nav item to show which page the user is on */
-        border: solid 3px white;  
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-        margin-left: -1.5px;
-        margin-right: -1.5px;
-       
-    } 
-    .here#store {
-        border-bottom: solid 3px rgb(205,55,80);   
-        background-color: rgb(205,55,80); 
-    }
-
-    .here#sell {
-        border-bottom: solid 3px #6000A9;  
-        background-color:  #6000A9; 
-    }
-
-    .here#news {
-        border-bottom: solid 3px #6000A9;  
-        background-color:  #6000A9; 
-    }
-    .here#support {
-        border-bottom: solid 3px rgba(3,142,255,1);  
-        background-color:  rgba(3,142,255,1); 
-    }
-    .here#login {
-        border-bottom: solid 3px #6000A9;  
-        background-color:  #6000A9; 
-    }
-    .here#news {
-        border-bottom: solid 3px #008186;  /*darker than in xd to comply with WCAG*/
-        background-color:  #008186; 
-    }
-
-
-
-
-    /* main changes -------------------------- */
-    main h3 {
-        font-size: 1.2rem;
-        padding-top: 24px;
-        margin-top: 0;
-    }
-
-    h4 {
-        font-size: 1.2rem;
-    }
-
-    #store-search {
-        position: absolute;
-        bottom: unset;
-        top: 0px;
-        margin: 0;
-        right: 2.2%;
-    }
-    #store-search input {
-        width: 18vw; 
-    }
-   
-    .main-storefront {
-        display: flex;
-        text-align: center;   
-    }
-    .store-navigation a {
-        transition-property: all;
-        transition-duration: 0.2s;
-    }
-    .store-navigation li {
-        font-size: 0.8rem;
-        padding: 0 1%;
-    }
-
-    .store-navigation a:hover {
-        font-weight: bold;
-    }
-
-    /*changes to search results page --------*/
-
-    .search-results p {
-        font-size: 1em;   
-    }
-
-    .search-item-information p{
-        margin: 15px;
-    }
-
-    .result-item img {
-        float: left;
-    }
-
-    .pcgames .featured-item {
-        width: 22%;
-    }
-    .pcgames {
-        padding: 0;
-    }
-
-
-
-    /* changes to checkout  --------*/
-    #cart-summary, #delivery-details, #payment-method, #page-title, #billing-address, .checkout-success {
-        margin: 0 auto 24px auto;
-    }
-    .summary, label, .form p, .checkout-success p {
-        font-size: 1rem;
-    }
-    
-    .payment-options {
-            width: 150px;
-            height: 16px;
-    }
-
-    
-    /* changes to form layout on sell page and login page -------*/
-    #sell-main form, #login-main form {
-        width: 66%;
-        max-width: 800px; 
-    }
-    #game-details label {
-        font-size: 1.2rem;
-    }
-    
-    .price {
-        max-width: 150px;
-        display: inline-block;
-    }
-    
-    /* changes to form layout on signup page -------------*/
-    
-    #signup-main {
-        display: flex;  
-    }
-    #signup-main form {
-        max-width: 624px;
-        margin-right: 0;
-    }
-    #signup-details {  
-        flex: 3;
-        margin-right: 24px;
-        max-width: 600px;
-    }
-    #member-benefits {
-        padding-top: 12px;
-        margin-left: 24px;
-        flex: 2;
-        max-width: 400px;
-    }
-
-    /* changes to account page and support page --------------*/
-    #all-details, #support-details {
-        width: 80%;
-        max-width: 800px;
-        margin: auto;
-    }
-    .basic-info img, .basic-info .pic {
-        position: absolute;
-        top: 50px;
-        right: 10%;
-        max-height: 140px;
-        border: 1px solid white;
-        border-radius: 6px;
-    }
-
-    #all-details .pic {
-        display: none;
-    }
-
-    /* footer changes------------ */
-    footer {
-        text-align: center;
-    }
-    .quick-links div {
-        display: inline-block;
-        margin: 0;
-    }
-    .quick-links {
-        width: 100%;
-        max-width: 800px;
-        display: unset;
-        text-align: center;
-    }
-    #legal {
+    .headline {
         text-align: left;
     }
-    #address {
-        text-align: right;
+    .headline h2 {
+        font-size: 3rem;
     }
-}
-
-
-/* Increase sizes for larger screens (over 800px wide) */
-@media (min-width: 800px){
-    header h1 {
-        font-size: 2em;
-        
-    }
-    header h2 {
-        font-size: 1.4em;
+    .description{
+        font-size: 1.2rem;
     }
 
-    .logo img {
-        min-width: 100px;
-        left: 5%;
+    #search-container {
+        width: 80%;
+        margin: 0 auto;
     }
-    .top-right img {
-        height: 30px;
-        width: 32px;  
+    #search-button{
+        padding: 5px;
     }
-    .text {
-        font-size: 0.8em;
+    .navigation{
+        top: 80px;
+        width: 50%;
     }
-
-    nav li {
-        font-size: 1.1rem ;
-    }
-    nav ul {
-        margin-top: 25px;
-    }
-
-    .store-navigation li {
-        font-size: 0.9rem;
-        padding: 0 0.9%;
+    
+    .store-navigation{
+        margin: 0 auto;
+        width: 80%;
+        font-size: 1rem;  
     }
 
-    .reviews {
-        display: unset;
-    }
-
-    /* switch to grid layout on sell form */
-    #game-details .game-name {grid-area: title;}
-    #game-details .condition-radio {grid-area: condition;}
-    #game-details .image-upload {grid-area: image;}
-    #game-details .description {grid-area: description;}
-    #game-details .price {grid-area: price;}
-    #game-details .terms {grid-area: terms;}
-    #game-details .send {grid-area: send;}
-
-    #game-details {
-        display: grid;
-        grid-template-areas:
-        'title title'
-        'condition image'
-        'description description'
-        'price terms'
-        'send send';
-    }
-    #game-details .terms input{
-        display: block;
-        margin: 6px;
-        height: 18px;
-        width: 18px;
-    }
-    #game-details .game-name {
-        max-width: 400px;
-    }
-
-    #game-details .send {
-        text-align: center;
-    }
-    .image-upload p{
+    .featured-item{
+        width: 46%;
         display: inline-block;
     }
 
-    /*account page and support page limit width of details*/
-    #all-details, #support-details {
-        width: 55%;   
+    main h1{
+        font-size: 1.2rem;
     }
-
-    #alien-attack {
-        display: flex;
-        max-width: 850px;
-        margin: auto;
+    main h4{
+        font-size: 1.4rem;
     }
-    #alien-attack article {
-        flex: 1;
-        margin: 24px;
-        max-width: 400px;
-    }
-
 }
 
-/* Increase sizes for larger screens (over 1000px)*/
-@media (min-width: 1000px){
-    header h1 {
-        font-size: 2.5em;
-        
+@media (min-width: 800px){
+    .headline {
+        display: block;
     }
-    header h2 {
-        font-size: 1.8em;
+    .logo img{
+        margin-right: 30px;
+        width: 140px;
+        height: 80px;
     }
-    nav li {
-        font-size: 1.5em ;
+    .description {
+        clear: unset;
+        display: block;
+        text-align: left;
     }
-    .store-navigation li {
-        font-size: 1.1rem;
-        padding: 8px 1.8%;
-        
+    #search-container{
+        margin: 60px 0 10px 0;
+        width: 60%;
     }
-    .main-storefront h3 {
-        font-size: 1.5em;
+    .hamburger, .showClose {
+        display: none;
     }
-   
-    .news {
+    .navigation {
+        top: 20px;
+        background-color: unset;
         display: unset;
+        width: unset;
     }
-    .featured {
-        flex: 3;
+    .navigation a {
+        padding: 5px 10px;
+        background-color: unset;
+        margin: 5px 0;
+        border: unset;
     }
-    .pcgames{
-        flex: 4;
+    .store-navigation {
+        margin: 0;
     }
+}
 
-    #all-details td {
-        min-width: 150px;
+@media (min-width: 1200px){
+    #search-container {
+        width: 50%;
+        margin: 40px 0 0 0;
+    }
+    #search-button{
+        height: 36px;
+        font-size: 1.5rem;
+    }
+    #search-container a img {
+        height: 26px;
+        padding: 5px 30px;
+    }
+    header {
+        padding: 30px 5%;
+    }
+    main{
+        padding: 20px 10%;
+    }
+    .featured-item{
+        width: 30%;
+        margin: 8px;
+    }
+    .store-navigation {
+        font-size: 1.2rem;
+        width: 70%;
+        margin: 25px 0;
+    }
+    .store-navigation a {
+        margin: 5px;
+    }
+}
+
+@media (min-width: 1400px){
+    .navigation {
+        top: 40px;
+    }
+    .navigation a{
+        display: inline;
+    }
+    #search-container{
+        position: absolute;
+        margin: 0;
+        top: 80px;
+        right: 5%;
+        width: 40%;
+    }
+    .featured-item {
+        width: 22%;
+    }
+    main h1{
+        font-size: 2rem;
+    }
+    footer{
+        padding: 30px 10%;
     }
 }

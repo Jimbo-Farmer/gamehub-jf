@@ -1,0 +1,214 @@
+@font-face {
+    font-family: "ArialRounded";
+    src: url("Arial Rounded MT Std Bold.ttf") format("truetype");
+  }
+
+
+body {
+    margin: 0 auto;
+    color: white;
+    background-color: black;
+    max-width: 2000px;   /* In case of site being viewed on an ultra-wide monitor and trying to stretch the whole 3840 pixels */
+    padding-bottom: 45px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+
+header {
+    font-family: "ArialRounded", Arial, Helvetica, sans-serif;
+    padding: 20px 5%;
+    background: linear-gradient(22deg, rgba(0,0,0,1) 60%, rgba(3,142,255,1) 100%, rgb(3, 142, 255) 100%);
+    text-transform: uppercase;
+    border-bottom: 2px solid #f62681;
+    text-align: center;
+}
+
+.logo {
+    display: inline;
+    float: left;
+}
+
+
+.logo img {
+    height: 40px;
+    width: 70px;
+}
+
+.headline {
+    display: inline-block;
+    margin: 0;
+}
+
+.headline h2 {
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px #87FBFF;
+    color: white;
+    display: inline;
+}
+
+.headline a {
+    text-decoration: none;
+    display: inline;  
+}
+
+.description {
+    text-align: center;
+    text-transform: none;
+    font-size: 0.8rem;
+    clear: left;
+}
+
+.description p {
+    margin: 5px 0 10px 0;
+}
+
+
+.colour-fade {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgb(255, 74, 195) 100%);
+    margin-bottom: 10px;
+}
+
+main {
+    margin-top: 0;
+    padding: 20px 5%;
+    position: relative;
+}
+
+
+
+main h1 {
+    font-family: "ArialRounded", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+      
+
+
+
+#search-button {
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 5px;
+    border: unset;
+    border-radius: 5px;
+    height: 30px;
+}
+
+#search-button:focus{
+    outline: none;
+}
+
+#search-container {
+    text-align: center;
+    position: relative;
+}
+#search-container a{
+    position: absolute;
+    right: 0;
+
+}
+#search-container a img {
+    height: 20px;
+    background-color: #f62681;
+    padding: 5px 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.mobile-cart {
+    position: fixed;
+    bottom: 5px;
+    right: 0px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 6px;
+    z-index: 500;
+    background-color: black;
+    border-top-left-radius: 5px;
+    color: white;
+    text-decoration: none;   
+}
+.mobile-cart:hover{
+    background-color: white;
+    color: black;
+}
+
+.cart-quantity {
+    background-color: #f62681;
+    padding: 3px 7px;
+    border-radius: 20px;
+}
+
+
+
+
+/* ------------------------Hamburger menu for mobile----------------------- */
+
+.hamburger {
+    float: right;
+    background-color: transparent;
+    border: none;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.hamburger img {
+    width: 70px;
+    height: 40px;
+}
+
+.navigation a {
+    display: block;
+    text-align: right;
+    padding: 20px;
+    background-color: black;
+    margin: 5px 0;
+    border: 2px solid #87FBFF;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation a:hover{
+    text-decoration: underline;
+    text-decoration-color: #f62681;
+}
+
+.navigation {
+    position: absolute;
+    top: 60px;
+    right: 5%;
+    width: 70%;
+    background-color: black;
+    display: none;
+    z-index: 1000;
+}
+
+.show-menu {
+    display: unset;
+}
+
+a.here{
+    text-decoration: underline;
+    text-decoration-color: #f62681;
+}
+
+#basket span {
+    color: white;
+}
+
+/* -------------------------footer---------------------------- */
+
+footer {
+   margin-left: 20px; 
+}
+
+#legal, #contact, #address {
+    margin: 10px 0px;
+}
+
+#legal p, #contact p, #address p {
+    margin: 0;
+}

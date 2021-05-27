@@ -1,0 +1,23 @@
+.summary{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+fieldset {
+    border-radius: 6px;
+    padding: 10px;
+    margin: 20px 0;
+}
+legend {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+}

@@ -1,0 +1,122 @@
+.featured-item {
+    border: 3px solid #87FBFF;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 5px;
+}
+
+
+
+
+main img {
+    width: 100%;
+    margin-bottom: -4%; 
+}
+
+h4{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 5px;  
+    font-size: 1.2rem; 
+}
+
+
+main h1 {
+    margin-bottom: 2px;
+}
+
+.item-information {
+    position: absolute;
+    top: 0;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    width: 100%;
+    height: 8%;
+    border-bottom: 1px solid #f62681;
+    transition: height 0.5s ease;
+}
+
+.extra-information {
+    width: 80%;
+    margin-left: 10%;
+    opacity: 0;  
+}
+
+.add-to-cart {
+    display: none;
+    padding: 5px;
+    background:  #038eff;
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    font-family: "ArialRounded", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+}
+
+.confirmation {
+    background-color: #f62681;  
+}
+
+.extra-info-show .extra-information{
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    transition-delay: 0.1s;
+}
+
+.extra-info-show .item-information {
+    height: 100%;
+    transition: height 0.5s ease;
+}
+
+.extra-info-show .add-to-cart {
+    display: block;
+}
+
+
+
+
+.store-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 5px 0;
+    list-style-type: none;    /*Remove bullet points*/ 
+    font-size: 0.8rem;   
+}
+
+.store-header{
+    width: 100%;
+    margin: 0 0 5px 0;
+    text-transform: capitalize;   
+}
+
+.store-navigation a{
+    flex: 1;
+    text-align: center;
+    margin: 4px 2px;
+    padding: 3px 5px;
+    font-family: "ArialRounded", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    background: #038eff;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.store-navigation a:hover, .add-to-cart:hover{
+    background: white;
+    color: black;
+} 
+
+.price {
+    font-size: 1.2rem;
+    text-align: center;
+}

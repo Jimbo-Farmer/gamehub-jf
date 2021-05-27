@@ -1,0 +1,26 @@
+
+.hamburger, .showClose {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: transparent;
+    background-image: url("../../icons and logo/hamburger-menu.png");
+    border: none;
+    width: 50px;
+    height: 40px;
+    background-size: cover;
+    z-index: 1000;
+}
+
+.showClose {
+    background-image: url("../../icons and logo/close-menu.png");
+}
+
+
+.top-right {
+    display: none;
+}
+
+.show-menu {
+    display: unset;
+}
