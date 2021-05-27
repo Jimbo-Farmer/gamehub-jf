@@ -90,11 +90,6 @@ let items = document.querySelectorAll(".featured-item")
 let infoDisplay = false;
 
 
-
-
-
-
-
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("click", toggleItemInfo)
   function toggleItemInfo(){
@@ -122,6 +117,7 @@ for (let i = 0; i < items.length; i++) {
   function toggleItemInfo(){
     items[i].classList.remove("extra-info-show");
     addToCart.innerHTML = `Add to cart`;
+    infoDisplay = false;
   }
 }
 
