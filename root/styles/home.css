@@ -69,15 +69,17 @@ main h1 {
 
 .extra-info-show .extra-information{
     opacity: 1;
-    transition: opacity 0.5s ease;
-    transition-delay: 0.1s;
     top: 10%;
-    
+    transition: opacity 0.3s ease 0.2s, top 0.5s ease 0s;
 }
+/* .extra-info-show .extra-information{
+    top: 10%;
+    transition: top 0.5s ease;
+} */
 
 .extra-info-show .item-information {
     height: 100%;
-    transition: height 0.5s ease;
+    transition: height 0.7s ease;
 }
 
 .extra-info-show .add-to-cart {

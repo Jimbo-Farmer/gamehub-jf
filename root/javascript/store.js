@@ -11,7 +11,7 @@ function gameHtml(siteSection, i, className){
       <div class="extra-information">
         <p>${gamesList[i].description}</p>
         <p class="price"><b>$${gamesList[i].price}</b></p>
-        <button class="add-to-cart" data-gameid=${gamesList[i].id}>Add to cart</button>
+        <button class="add-to-cart" onclick="blur()" data-gameid=${gamesList[i].id}>Add to cart</button>
       </div>
     </div>
     <button class="hide-info" onclick="event.stopPropagation()"><img src="icons and logo/exit-button.png" alt="hide info"></img></button>
