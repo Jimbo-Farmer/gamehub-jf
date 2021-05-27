@@ -92,29 +92,39 @@ let infoDisplay = false;
 
 
 
-for (let i = 0; i < items.length; i++) {
-  items[i].addEventListener("mouseover", toggleItemInfo)
-  function toggleItemInfo(){
-    this.classList.add("extra-info-show");
-  }
-}
-for (let i = 0; i < items.length; i++) {
-  items[i].addEventListener("mouseout", toggleItemInfo)
-  function toggleItemInfo(){
-    this.classList.remove("extra-info-show");
-    addToCart.innerHTML = `Add to cart`;
-  }
-}
+
+
 
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("click", toggleItemInfo)
   function toggleItemInfo(){
-    if(purchaseComplete){
-      items[i].classList.toggle("extra-info-show");
+    if(!infoDisplay){
+      items[i].classList.add("extra-info-show");
+      infoDisplay = true;
+    } else if(infoDisplay && purchaseComplete){
+      items[i].classList.remove("extra-info-show");
       addToCart.innerHTML = `Add to cart`;
-    } 
+      infoDisplay = false;
+    }
   }
 }
+
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("mouseenter", toggleItemInfo)
+  function toggleItemInfo(){  
+    items[i].classList.add("extra-info-show");
+    infoDisplay = true;  
+  }
+}
+
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("mouseleave", toggleItemInfo)
+  function toggleItemInfo(){
+    items[i].classList.remove("extra-info-show");
+    addToCart.innerHTML = `Add to cart`;
+  }
+}
+
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("keyup", function(e){
     if(e.keyCode === 13){
