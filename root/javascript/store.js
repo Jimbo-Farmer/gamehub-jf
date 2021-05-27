@@ -38,6 +38,10 @@ function resetText(button){
 const mobileCart = document.querySelector(".mobile-cart-container");
 const navBasket = document.querySelector("#basket");
 const addToCart = document.querySelectorAll(".add-to-cart");
+for(let i = 0; i < addToCart.length; i++){
+  addToCart[i].disabled = true;
+}
+
 
 addToCart.forEach(function(button){
   button.onmousedown = function(event){
@@ -65,12 +69,12 @@ addToCart.forEach(function(keypress){
     purchaseComplete = false;
     if(e.keyCode ===13){
       cartQuantity += 1;
-    this.innerHTML = `Added to cart!`;
-    this.classList.add("confirmation");
-    mobileCart.innerHTML = `<a href="checkout.html" class="mobile-cart">Cart <span class="cart-quantity">${cartQuantity}</span></a>`;
-    navBasket.innerHTML = `<span class="cart-quantity">${cartQuantity}</span>`;
-    setTimeout(resetText, 2000, this);
-    const gameToAdd = gamesList.find(game => game.id === event.target.dataset.gameid);
+      this.innerHTML = `Added to cart!`;
+      this.classList.add("confirmation");
+      mobileCart.innerHTML = `<a href="checkout.html" class="mobile-cart">Cart <span class="cart-quantity">${cartQuantity}</span></a>`;
+      navBasket.innerHTML = `<span class="cart-quantity">${cartQuantity}</span>`;
+      setTimeout(resetText, 2000, this);
+      const gameToAdd = gamesList.find(game => game.id === event.target.dataset.gameid);
     if(gameToAdd.qty > 0){
       gameToAdd.qty += 1;  
     } else {
@@ -89,12 +93,13 @@ addToCart.forEach(function(keypress){
 let items = document.querySelectorAll(".featured-item")
 let infoDisplay = false;
 
-
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("touchend", toggleItemInfo)
   function toggleItemInfo(){
     if(!infoDisplay){
       items[i].classList.add("extra-info-show");
+      addToCart[i].disabled = false;
+      console.log(addToCart[i]);
       infoDisplay = true;
     } else if(infoDisplay && purchaseComplete){
       items[i].classList.remove("extra-info-show");
@@ -109,6 +114,8 @@ for (let i = 0; i < items.length; i++) {
   function toggleItemInfo(){  
     if(!infoDisplay){
       items[i].classList.add("extra-info-show");
+      addToCart[i].disabled = false;
+      console.log(addToCart[i]);
       infoDisplay = true; 
     }  
   }
@@ -119,6 +126,7 @@ for (let i = 0; i < items.length; i++) {
   function toggleItemInfo(){
     items[i].classList.remove("extra-info-show");
     addToCart.innerHTML = `Add to cart`;
+    addToCart[i].disabled = true;
     infoDisplay = false;
   }
 }
@@ -127,6 +135,7 @@ for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("keyup", function(e){
     if(e.keyCode === 13){
       items[i].classList.toggle("extra-info-show");
+      addToCart[i].disabled = false;
       addToCart.innerHTML = `Add to cart`;  
     }
   })
