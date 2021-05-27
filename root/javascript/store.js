@@ -40,9 +40,9 @@ function resetText(button){
 const mobileCart = document.querySelector(".mobile-cart-container");
 const navBasket = document.querySelector("#basket");
 const addToCart = document.querySelectorAll(".add-to-cart");
-// for(let i = 0; i < addToCart.length; i++){
-//   addToCart[i].disabled = true;
-// }
+for(let i = 0; i < addToCart.length; i++){
+  addToCart[i].disabled = true;
+}
 
 
 addToCart.forEach(function(button){
@@ -100,6 +100,7 @@ for (let i = 0; i < items.length; i++) {
   function toggleItemInfo(){
     if(purchaseComplete){
       items[i].classList.add("extra-info-show");
+      addToCart[i].disabled = false;
     }
   }
 }
@@ -109,6 +110,7 @@ for (let i = 0; i < items.length; i++) {
   function toggleItemInfo(){
     if(purchaseComplete){
       items[i].classList.remove("extra-info-show");
+      addToCart[i].disabled = true;
     } 
   }
 }
@@ -117,6 +119,11 @@ for (let i = 0; i < items.length; i++) {
     if(e.keyCode === 13){
       if(purchaseComplete){
         items[i].classList.toggle("extra-info-show");
+        if(addToCart.disabled){
+          addToCart.disabled = false;
+        } else {
+          addToCart.disabled = true;
+        }
       } 
     }
   })
