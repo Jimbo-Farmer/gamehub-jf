@@ -4,7 +4,7 @@ const featured = document.querySelector(".featured");
 import { gamesList } from "./resources/products.js";
 
 function gameHtml(siteSection, i, className){
-  siteSection.innerHTML += `<div class="${className}-item">
+  siteSection.innerHTML += `<div class="${className}-item" tabindex="0">
   <img src="${gamesList[i].image}" alt="${gamesList[i].name}">
     <div class="item-information">
       <h4>${gamesList[i].name}</h4>
@@ -57,6 +57,29 @@ addToCart.forEach(function(button){
   }
 })
 
+addToCart.forEach(function(keypress){
+  keypress.onkeyup = function(e){
+    if(e.keyCode ===13){
+      cartQuantity += 1;
+    this.innerHTML = `Added to cart!`;
+    this.classList.add("confirmation");
+    mobileCart.innerHTML = `<a href="checkout.html" class="mobile-cart">Cart <span class="cart-quantity">${cartQuantity}</span></a>`;
+    navBasket.innerHTML = `<span class="cart-quantity">${cartQuantity}</span>`;
+    setTimeout(resetText, 2000, this);
+    const gameToAdd = gamesList.find(game => game.id === event.target.dataset.gameid);
+    if(gameToAdd.qty > 0){
+      gameToAdd.qty += 1;  
+    } else {
+      cartItems.push(gameToAdd);
+      gameToAdd.qty += 1;
+    }
+    localStorage.setItem("cartList", JSON.stringify(cartItems));
+    localStorage.setItem("numberOfItems", JSON.stringify(cartQuantity));
+    }
+    
+  }
+})
+
 //Game information display
 
 let items = document.querySelectorAll(".featured-item")
@@ -65,18 +88,17 @@ let infoDisplay = false;
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("touchstart", toggleItemInfo)
   function toggleItemInfo(){
-    if(!infoDisplay){
-      this.classList.add("extra-info-show");
-      addToCart.innerHTML = `Add to cart`;
-      infoDisplay = true;
-    } else {
-      this.classList.remove("extra-info-show");
-      infoDisplay = false;
-    }
-
-    // this.classList.toggle("extra-info-show");
-    // addToCart.innerHTML = `Add to cart`;
+    this.classList.toggle("extra-info-show");
+    addToCart.innerHTML = `Add to cart`;
   }
+}
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("keyup", function(e){
+    if(e.keyCode === 13){
+      items[i].classList.toggle("extra-info-show");
+      addToCart.innerHTML = `Add to cart`;  
+    }
+  })
 }
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("mouseover", toggleItemInfo)

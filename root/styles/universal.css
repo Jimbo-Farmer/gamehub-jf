@@ -199,6 +199,53 @@ a.here{
     color: white;
 }
 
+/* ---------------------Accessibility------------------------- */
+
+.navigation a:focus {
+    background-color: white;
+    color: black;
+}
+
+.headline a:focus, .logo a:focus{
+    border-bottom: 3px solid white;
+}
+
+#search-button:focus {
+    border-bottom: 2px solid #f62681;       
+}
+
+#search-container a:focus > img {
+    background-color: white;
+    border: 3px solid black;
+}
+
+.store-navigation a:focus {
+    background-color: white;
+    color: black;
+}
+
+.featured-item:focus > .item-information {
+    background-color: lightgrey;
+    color: black;
+}
+
+.add-to-cart:focus {
+    background-color: white;
+    color: black;
+    border: 2px solid #f62681;
+    padding: 10px;
+    transition: padding 0.5s ease   ;
+}
+
+.mobile-cart-container a:focus {
+    background-color: white;
+    color: black;
+    border: 2px solid #f62681;
+}
+
+
+/* ------------------------------------------------------------ */
+
 /* -------------------------footer---------------------------- */
 
 footer {
