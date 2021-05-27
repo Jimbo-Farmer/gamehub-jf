@@ -94,7 +94,7 @@ let items = document.querySelectorAll(".featured-item")
 let infoDisplay = false;
 
 for (let i = 0; i < items.length; i++) {
-  items[i].addEventListener("touchend", toggleItemInfo)
+  items[i].addEventListener("mousedown", toggleItemInfo)
   function toggleItemInfo(){
     if(!infoDisplay){
       items[i].classList.add("extra-info-show");
