@@ -109,28 +109,28 @@ for (let i = 0; i < items.length; i++) {
   }
 }
 
-for (let i = 0; i < items.length; i++) {
-  items[i].addEventListener("mouseenter", toggleItemInfo)
-  function toggleItemInfo(){  
-    if(!infoDisplay){
-      items[i].classList.add("extra-info-show");
-      addToCart[i].disabled = false;
-      console.log(addToCart[i].disabled);
-      infoDisplay = true; 
-    }  
-  }
-}
+// for (let i = 0; i < items.length; i++) {
+//   items[i].addEventListener("mouseenter", toggleItemInfo)
+//   function toggleItemInfo(){  
+//     if(!infoDisplay){
+//       items[i].classList.add("extra-info-show");
+//       addToCart[i].disabled = false;
+//       console.log(addToCart[i].disabled);
+//       infoDisplay = true; 
+//     }  
+//   }
+// }
 
-for (let i = 0; i < items.length; i++) {
-  items[i].addEventListener("mouseleave", toggleItemInfo)
-  function toggleItemInfo(){
-    items[i].classList.remove("extra-info-show");
-    addToCart.innerHTML = `Add to cart`;
-    addToCart[i].disabled = true;
-    console.log(addToCart[i].disabled);
-    infoDisplay = false;
-  }
-}
+// for (let i = 0; i < items.length; i++) {
+//   items[i].addEventListener("mouseleave", toggleItemInfo)
+//   function toggleItemInfo(){
+//     items[i].classList.remove("extra-info-show");
+//     addToCart.innerHTML = `Add to cart`;
+//     addToCart[i].disabled = true;
+//     console.log(addToCart[i].disabled);
+//     infoDisplay = false;
+//   }
+// }
 
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("keyup", function(e){
