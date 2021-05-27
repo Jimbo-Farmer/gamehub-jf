@@ -135,6 +135,7 @@ main h1 {
     bottom: 5%;
     transform: rotate(180deg);
     background-color: transparent;
+    z-index: 1000;
 }
 
     /* position: absolute;

@@ -14,7 +14,7 @@ function gameHtml(siteSection, i, className){
         <button class="add-to-cart" data-gameid=${gamesList[i].id}>Add to cart</button>
       </div>
     </div>
-    <button class="hide-info"><img src="icons and logo/dropdown.png" alt="show more info"></img></button>
+    <button class="hide-info"><img src="icons and logo/dropdown.png" alt="hide info"></img></button>
   </div>
   `
 }
@@ -121,11 +121,11 @@ for (let i = 0; i < items.length; i++) {
     hideInfo[i].style.display = "unset";
   }
 }
-
+console.log(hideInfo)
 for (let i = 0; i < hideInfo.length; i++) {
   hideInfo[i].addEventListener("click", toggleItemInfo)
   function toggleItemInfo(){
-    items[i].classList.remove("extra-info-show");
+    hideInfo[i].closest(".featured-item").classList.remove("extra-info-show");
     addToCart[i].disabled = true;
     hideInfo[i].disabled = true;
     hideInfo[i].style.display = "none";
