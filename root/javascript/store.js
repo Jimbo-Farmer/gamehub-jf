@@ -104,23 +104,6 @@ for (let i = 0; i < items.length; i++) {
   }
 }
 
-// for (let i = 0; i < items.length; i++) {
-//   items[i].addEventListener("keyup", function(e){
-//     if(e.keyCode === 13){
-//       if(purchaseComplete){
-//         items[i].classList.toggle("extra-info-show");
-//       } 
-//     }
-//   })
-// }
-
-// for (let i = 0; i < items.length; i++) {
-//   items[i].addEventListener("mouseover", toggleItemInfo)
-//   function toggleItemInfo(){   
-//       items[i].classList.add("extra-info-show");  
-//   }
-// }
-
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("mouseleave", toggleItemInfo)
   function toggleItemInfo(){
@@ -129,5 +112,23 @@ for (let i = 0; i < items.length; i++) {
     } 
   }
 }
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("keyup", function(e){
+    if(e.keyCode === 13){
+      if(purchaseComplete){
+        items[i].classList.toggle("extra-info-show");
+      } 
+    }
+  })
+}
+
+// for (let i = 0; i < items.length; i++) {
+//   items[i].addEventListener("mouseover", toggleItemInfo)
+//   function toggleItemInfo(){   
+//       items[i].classList.add("extra-info-show");  
+//   }
+// }
+
+
 
 

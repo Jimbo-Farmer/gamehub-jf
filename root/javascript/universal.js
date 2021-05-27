@@ -23,4 +23,6 @@ const itemsCount = document.querySelector("#basket");
 if((!isNaN(basketQty) && basketQty > 0)){
   itemsCount.innerHTML = `<span class="cart-quantity">${basketQty}</span>`;
 };
+const miniCart = document.querySelector(".mobile-cart-container");
+miniCart.innerHTML = `<a href="checkout.html" class="mobile-cart">Cart <span class="cart-quantity">${basketQty}</span></a>`;
  
