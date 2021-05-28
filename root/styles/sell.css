@@ -46,8 +46,7 @@ input[type="file"] {
     display: none;
 }
 
-label span {
-    
+label span { 
     background-color: #038eff;
     font-weight: normal;
     text-transform: uppercase;
@@ -85,11 +84,24 @@ label span {
 
 .success a {
     margin: 10px 20px;
+    display: inline-block;
     text-decoration: none;
     color: white;
     background-color: #038eff;
     padding: 4px 16px;
     border-radius: 6px;
+}
+
+.success a:hover {
+    background-color: #f62681 ;
+}
+
+.success a:focus {
+    background-color: #f62681 ;
+}
+
+#terms {
+    height: 20px;
 }
 
 .hidden {
