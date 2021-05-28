@@ -6,6 +6,15 @@
 
 
 @media (min-width: 600px){ 
+    h1{
+        font-size: 1.5rem;
+    }
+    #sell-main{
+        width: 80%;
+    }
+    #sell-main label, .extra-label {
+        font-size: 1.2rem;  
+    }
     .logo img, .hamburger img {
         width: 105px;
         height: 60px;
@@ -42,16 +51,16 @@
         width: 46%;
         display: inline-block;
     }
-
-    main h1{
-        font-size: 1.2rem;
-    }
     main h4{
         font-size: 1.4rem;
     }
 }
 
 @media (min-width: 800px){
+    main h1{
+        font-size: 2rem;
+    }
+    
     .headline {
         display: block;
     }
@@ -139,9 +148,7 @@
     .featured-item {
         width: 22%;
     }
-    main h1{
-        font-size: 2rem;
-    }
+    
     footer{
         padding: 30px 10%;
     }

@@ -1,0 +1,97 @@
+main {
+    max-width: 800px;
+    margin: auto;
+}
+
+fieldset {
+    border-radius: 6px;
+}
+
+.form-input {                           /*make variable - cart and sell*/
+    border-radius: 6px;
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+}
+
+#sell-main label, .extra-label {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+form div {
+    margin: 18px 0;
+    padding: 0 12px;
+}
+
+.condition-radio div, .condition-radio label {
+    margin: 3px 0;
+    font-weight: normal;
+}
+
+
+.image-upload p{
+    display: none;
+    border: 1px solid grey;
+    border-radius: 6px;
+    height: 90%;
+    width: 100%;
+    text-align: center;
+    color: grey;
+} 
+
+input[type="file"] {
+    display: none;
+}
+
+label span {
+    
+    background-color: #038eff;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-radius: 6px;
+    padding: 2px 10px;
+    font-size: 0.8rem;  
+}
+
+.price {
+    max-width: 100px;
+}
+
+.send input {
+    display: block;
+    margin: 6px auto;
+}
+
+.animate input {
+    animation-name: rotate;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    
+}
+  
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.success{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.success a {
+    margin: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #038eff;
+    padding: 4px 16px;
+    border-radius: 6px;
+}
+
+.hidden {
+    visibility: hidden;
+}

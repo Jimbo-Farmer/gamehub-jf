@@ -8,7 +8,7 @@ function gameHtml(siteSection, i, className){
   <img src="${gamesList[i].image}" alt="${gamesList[i].name}">
     <div class="item-information">
       <h4 tabindex="0">${gamesList[i].name}</h4>
-      <div class="extra-information">
+      <div tabindex="0" class="extra-information">
         <p>${gamesList[i].description}</p>
         <p class="price"><b>$${gamesList[i].price}</b></p>
         <button class="add-to-cart" onclick="blur()" data-gameid=${gamesList[i].id}>Add to cart</button>
@@ -70,7 +70,13 @@ addToCart.forEach(function(button){
     navBasket.innerHTML = `<span class="cart-quantity">${cartQuantity}</span>`;
     setTimeout(resetText, 2000, this);
     const gameToAdd = gamesList.find(game => game.id === event.target.dataset.gameid);
-    if(gameToAdd.qty > 0){
+    const alreadyInCart = cartItems.find(game => game.id === event.target.dataset.gameid);
+    if(alreadyInCart){
+      alreadyInCart.qty += 1;
+      const index = cartItems.indexOf(alreadyInCart);
+      cartItems.splice(index, 1);
+      cartItems.push(alreadyInCart);
+    } else if((gameToAdd.qty > 0) && !alreadyInCart){
       gameToAdd.qty += 1;  
     } else {
       cartItems.push(gameToAdd);
@@ -134,7 +140,6 @@ for (let i = 0; i < hideInfo.length; i++) {
   hideInfo[i].addEventListener("click", toggleItemInfo)
   function toggleItemInfo(){
     hideInfo[i].closest(".featured-item").classList.remove("extra-info-show");
-    console.log(hideInfo[i].closest(".featured-item"))
     addToCart[i].disabled = true;
     // hideInfo[i].disabled = true;
     hideInfo[i].style.display = "none";

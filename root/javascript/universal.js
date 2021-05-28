@@ -27,4 +27,6 @@ if((!isNaN(basketQty) && basketQty > 0)){
 };
 
 
- 
+// login info
+
+let loggedIn = false;

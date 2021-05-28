@@ -40,6 +40,7 @@ main h1 {
 
 .extra-information {
     width: 80%;
+    display: none;
     margin-left: 6%;
     opacity: 0; 
     position: absolute;
@@ -68,9 +69,10 @@ main h1 {
 }
 
 .extra-info-show .extra-information{
+    display: unset;
     opacity: 1;
     top: 10%;
-    transition: opacity 0.3s ease 0.2s, top 0.5s ease 0s;
+    transition: opacity 5s ease;
 }
 
 .extra-info-show .item-information {

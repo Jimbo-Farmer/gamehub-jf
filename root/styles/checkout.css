@@ -21,3 +21,80 @@ main {
     max-width: 800px;
     margin: auto;
 }
+
+.column-headers {
+    font-weight: bold;
+}
+
+.subtotal {
+    border-top: 1px solid black;
+}
+
+.total {
+    border-top: 1px solid black;
+    font-weight: bold;
+}
+
+#delivery-details div, .card-details div {
+    margin: 6px 5% 0 0;
+    display: inline-block;
+    width: 100%;
+    max-width: 250px;
+}
+
+#payment-method .payment-radio div{
+    margin: 0;
+    text-align: center;
+}
+
+label, form p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.form-input, .payment-options {         /*make variable*/
+    border-radius: 6px;
+    padding: 4px 2px;
+    display: block;
+    width: 100%;
+    
+}
+
+.payment-options {
+    height: 16px;
+    width: 150px;
+    border: 2px solid cyan;
+    padding: 4px 8px;
+    margin: 6px;
+}
+
+.payment-radio input {
+    display: none;
+}
+
+.payment-radio input[type="radio"]:checked + label {
+    background-color: #038eff;            /* change colour of label when checked */
+}
+
+.payment-radio div {
+      display: inline-block;
+}
+
+#payment-method .expiry, #payment-method .cvc {
+    float: left;
+}
+
+#checkout-submit {
+    font-size: 1rem;
+    display: block;
+    margin: 24px auto 48px auto;
+    padding: 6px 24px;                 /*create variable for cta*/
+    background-color: #038eff;         /*create variable for cta*/
+    color: white;                   /*create variable for cta*/
+    font-weight: bold;                /*create variable for cta*/
+    border-radius: 6px;
+    cursor: pointer;
+}
+#checkout-submit:hover {
+    background-color: darkblue;
+} 

@@ -82,6 +82,7 @@ main {
 main h1 {
     font-family: "ArialRounded", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
+    font-size: 1.5rem;
 }
 
       
