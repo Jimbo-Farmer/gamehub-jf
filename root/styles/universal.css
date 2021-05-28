@@ -200,6 +200,10 @@ a.here{
     color: white;
 }
 
+.checkout-success a {
+    color: #87FBFF;
+}
+
 /* ---------------------Accessibility------------------------- */
 
 .navigation a:focus {

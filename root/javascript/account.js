@@ -1,9 +1,13 @@
 const accountHtml = document.querySelector(".account-container");
+let alreadyLoggedIn = JSON.parse(localStorage.getItem("loggedIn"));
 
+let loggedIn;
 let logIn;
 let signIn;
+let logout;
 
-if(!loggedIn){
+console.log(loggedIn);
+if(!alreadyLoggedIn){
     accountHtml.innerHTML = `<form action="account.html" method="dialog">  
     <h3>Login below. <span id="signup-prompt" tabindex="0">New user?</span></h3>
     <fieldset id="user-details">
@@ -25,9 +29,10 @@ if(!loggedIn){
     </fieldset>  
     </form>`
     logIn = document.querySelector("#login-submit");
-    logIn.addEventListener("click", goToAccount);
-}
-
+    logIn.addEventListener("click", goToAccount);   
+} else {
+    goToAccount();
+};
 
 const signup = document.querySelector("#signup-prompt");
 
@@ -62,13 +67,14 @@ function expand(){
             </fieldset>`
             signIn = document.querySelector("#signup-submit");
             signIn.addEventListener("click", goToAccount);
+            
 }
+
 
 
 function goToAccount(){
     accountHtml.innerHTML =
     `<section id="all-details">
-                <h3>Account</h3>
                 <section class="basic-info">
                     <h4 id="click">Basic Info <span>(edit)</span></h4>
                     <table>
@@ -105,24 +111,7 @@ function goToAccount(){
                 </section>
     
                 <section class="wishlist collapse">
-                    <h4>Wishlist</h4> 
-                    <table>
-                        <tr>
-                            <td>Boxer </td>
-                            <td class="add">Add to cart</td>
-                            <td class="delete">x</td>
-                        </tr>
-                        <tr>
-                            <td>Assassin</td>
-                            <td class="add">Add to cart</td>
-                            <td class="delete">x</td>
-                        </tr>
-                        <tr>
-                            <td>Racing</td>
-                            <td class="add">Add to cart</td>
-                            <td class="delete">x</td>
-                        </tr>
-                    </table>          
+                    <h4>Wishlist</h4>          
                 </section>
                 <section class="delivery-details collapse">
                     <h4>Delivery details</h4>            
@@ -139,6 +128,17 @@ function goToAccount(){
                 <section class="delete collapse">
                     <h4 class="delete">Delete account</h4>            
                 </section>
+                <section class="Log Out collapse">
+                    <a id="log-out" href="account.html" class="logout">Log Out</a>            
+                </section>
     
             </section>`
+    loggedIn = true;
+    localStorage.setItem("loggedIn", JSON.stringify(loggedIn));
+    logout = document.querySelector("#log-out");
+    logout.addEventListener("click", logOut);
+    function logOut(){
+        localStorage.removeItem("loggedIn");
+    }
 }
+

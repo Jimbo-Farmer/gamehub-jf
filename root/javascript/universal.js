@@ -29,4 +29,3 @@ if((!isNaN(basketQty) && basketQty > 0)){
 
 // login info
 
-window.loggedIn = false;

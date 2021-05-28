@@ -2,6 +2,8 @@ const shoppingCart = JSON.parse(localStorage.getItem("cartList"));
 console.log(shoppingCart);
 const summary = document.querySelector(".summary");
 const totals = document.querySelectorAll(".item-total");
+const paymentButton = document.querySelector("#checkout-submit");
+
 
 function total(array){
     let sum = 0;
@@ -14,8 +16,10 @@ function total(array){
 
 let shipping = 5;
 
-
-summary.innerHTML = `
+if(!shoppingCart){
+    summary.innerHTML = `<tbody>Your Cart Is Empty :(</tbody>`
+} else {
+    summary.innerHTML = `
     <tbody>
         <tr class="column-headers">
             <td tabindex="0">Item</td>
@@ -33,7 +37,7 @@ summary.innerHTML = `
             </tr>`
         }
       
-summary.innerHTML +=`<tr>
+    summary.innerHTML +=`<tr>
             <td></td>
             <td></td>
             <td tabindex="0" class="subtotal">Subtotal</td>
@@ -52,5 +56,12 @@ summary.innerHTML +=`<tr>
             <td tabindex="0" class="total">$${total(shoppingCart) + shipping}</td>
         </tr>
     </tbody>          
-`;
+    `;
+}
 
+
+paymentButton.addEventListener("click", clearCart);
+function clearCart(){
+    localStorage.removeItem("cartList");
+    localStorage.removeItem("numberOfItems");
+}

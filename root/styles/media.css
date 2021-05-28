@@ -57,6 +57,16 @@
     #signup-details legend {
         font-size: 1.2rem;
     }
+
+    #all-details td {
+        min-width: 200px;
+    }
+    #all-details table {
+        font-size: 1.2rem;
+    }
+    #log-out{
+        font-size: 1.4rem;
+    }
 }
 
 @media (min-width: 800px){
