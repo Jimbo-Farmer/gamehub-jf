@@ -64,3 +64,67 @@ form div {
     background-color: darkblue;
 } 
 
+
+td {
+    min-width: 100px;
+}
+
+.collapse {
+    height: 55px;
+    overflow: hidden;
+}
+
+h4 span {
+    color: cyan;
+    font-size: 0.8rem;
+}
+
+.delete {
+    color: red;
+}
+.wishlist .delete {
+    min-width: 50px;
+    text-align: center;
+}
+
+.add {
+    text-align: center;
+    margin-right: 12px;
+    padding: var(--cta-padding);                 
+    border: var(--cta-border);         
+    color: white;                   
+    font-weight: bold;                
+    border-radius: 15px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 60%, rgba(3,142,255,1) 100%, rgba(3,142,255,1) 100%);
+}
+
+.basic-info {
+    position: relative;
+}
+
+.basic-info img {
+    max-height: 140px;
+    border: 1px solid white;
+    border-radius: 6px;
+}
+
+table {
+    margin-left: 5%;
+}
+
+td {
+    vertical-align: top;
+}
+
+#contact {
+    margin-top: 20px;
+    margin-bottom: 24px;
+}
+
+#support-main h4 {
+    padding: 0;
+}
+
+#support-main .collapse {
+    height: 22.4px;
+}

@@ -8,7 +8,7 @@ function gameHtml(siteSection, i, className){
   <img src="${gamesList[i].image}" alt="${gamesList[i].name}">
     <div class="item-information">
       <h4 tabindex="0">${gamesList[i].name}</h4>
-      <div tabindex="0" class="extra-information">
+      <div tabindex="0" class="extra-information" onclick="blur()">
         <p>${gamesList[i].description}</p>
         <p class="price"><b>$${gamesList[i].price}</b></p>
         <button class="add-to-cart" onclick="blur()" data-gameid=${gamesList[i].id}>Add to cart</button>
