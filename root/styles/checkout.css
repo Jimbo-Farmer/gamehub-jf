@@ -30,6 +30,10 @@ main {
     border-top: 1px solid black;
 }
 
+table td:focus{
+    background-color: lightgray;
+}
+
 .total {
     border-top: 1px solid black;
     font-weight: bold;

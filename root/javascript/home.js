@@ -1,39 +1,32 @@
+//Create game item html
+const featured = document.querySelector(".featured");
+
 import { gamesList } from "./resources/products.js";
 
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const primary = params.get("primary");
-const secondary = params.get("secondary");
-
-const results = document.querySelector(".results");
-
-const breadcrumbContainer = document.querySelector(".store-header");
-breadcrumbContainer.innerHTML = `<a href="index.html">Home</a> > <a href="index.html">${primary}</a> > ${secondary}`;
-
-const pageTitle = document.querySelector("h1");
-pageTitle.innerHTML = `${secondary} games`;
-
 function gameHtml(siteSection, i, className){
-    siteSection.innerHTML += `<div class="${className}-item">
-    <img src="${gamesList[i].image}" alt="${gamesList[i].name}">
-      <div class="item-information">
-        <h4 tabindex="0">${gamesList[i].name}</h4>
-        <div tabindex="0" class="extra-information" onclick="blur()">
-          <p>${gamesList[i].description}</p>
-          <p class="price"><b>$${gamesList[i].price}</b></p>
-          <button class="add-to-cart" onclick="blur()" data-gameid=${gamesList[i].id}>Add to cart</button>
-        </div>
+  siteSection.innerHTML += `<div class="${className}-item">
+  <img src="${gamesList[i].image}" alt="${gamesList[i].name}">
+    <div class="item-information">
+      <h4 tabindex="0">${gamesList[i].name}</h4>
+      <div tabindex="0" class="extra-information" onclick="blur()">
+        <p>${gamesList[i].description}</p>
+        <p class="price"><b>$${gamesList[i].price}</b></p>
+        <button class="add-to-cart" onclick="blur()" data-gameid=${gamesList[i].id}>Add to cart</button>
       </div>
-      <button class="hide-info" onclick="event.stopPropagation()"><img src="icons and logo/exit-button.png" alt="hide info"></img></button>
     </div>
-    `
-  }
+    <button class="hide-info" onclick="event.stopPropagation()"><img src="icons and logo/exit-button.png" alt="hide info"></img></button>
+  </div>
+  `
+}
 
-  for(let i = 0; i<10 ; i++){
-    gameHtml(results, i, "featured");
-  }
+//Draw featured items on homepage
 
-  // Add to cart
+for(let i = 8; i>0 ; i--){
+  gameHtml(featured, i, "featured");
+}
+
+
+// Add to cart
 const basketQty = JSON.parse(localStorage.getItem("numberOfItems"));
 if((!isNaN(basketQty) && basketQty > 0)){
   var cartQuantity = basketQty;
@@ -181,4 +174,30 @@ for (let i = 0; i < items.length; i++) {
     }   
   })
 }
+
+
+//Game Browse-------------
+
+const platformButton = document.querySelector("#platforms-button");
+const genreButton = document.querySelector("#genre-button");
+const platform = document.querySelector("#platform");
+const genre = document.querySelector("#genre");
+
+platformButton.addEventListener("click", showPlatforms);
+function showPlatforms(){
+  if(genre.classList.length === 0){
+    genre.classList.toggle("hidden");
+  }
+  platform.classList.toggle("hidden");
+}
+genreButton.addEventListener("click", showGenres);
+function showGenres(){
+  if(platform.classList.length === 0){
+    platform.classList.toggle("hidden");
+  }
+  genre.classList.toggle("hidden");
+  console.log(genre.classList)
+}
+
+
 

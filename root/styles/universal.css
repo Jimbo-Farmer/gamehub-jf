@@ -255,6 +255,11 @@ input:focus {
 
 /* -------------------------footer---------------------------- */
 
+
+.quick-links {
+    margin-bottom: 40px;
+}
+
 .quick-links p {
     font-weight: bold;
 }
