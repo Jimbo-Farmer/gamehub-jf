@@ -25,6 +25,8 @@ for(let i = 8; i>0 ; i--){
   gameHtml(featured, i, "featured");
 }
 
+
+// Add to cart
 const basketQty = JSON.parse(localStorage.getItem("numberOfItems"));
 if((!isNaN(basketQty) && basketQty > 0)){
   var cartQuantity = basketQty;
@@ -35,9 +37,7 @@ if(JSON.parse(localStorage.getItem("cartList"))){
 } else {
   cartItems = [];
 }
-// Add to cart
 
-// let cartItems = [];
 let purchaseComplete = true;
 
 function resetText(button){
@@ -107,7 +107,6 @@ addToCart.forEach(function(keypress){
     localStorage.setItem("cartList", JSON.stringify(cartItems));
     localStorage.setItem("numberOfItems", JSON.stringify(cartQuantity));
     }
-    
   }
 })
 
@@ -177,6 +176,28 @@ for (let i = 0; i < items.length; i++) {
 }
 
 
+//Game Browse-------------
+
+const platformButton = document.querySelector("#platforms-button");
+const genreButton = document.querySelector("#genre-button");
+const platform = document.querySelector("#platform");
+const genre = document.querySelector("#genre");
+
+platformButton.addEventListener("click", showPlatforms);
+function showPlatforms(){
+  if(genre.classList.length === 0){
+    genre.classList.toggle("hidden");
+  }
+  platform.classList.toggle("hidden");
+}
+genreButton.addEventListener("click", showGenres);
+function showGenres(){
+  if(platform.classList.length === 0){
+    platform.classList.toggle("hidden");
+  }
+  genre.classList.toggle("hidden");
+  console.log(genre.classList)
+}
 
 
 

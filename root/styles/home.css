@@ -84,9 +84,6 @@ main h1 {
     display: block;
 }
 
-
-
-
 .store-navigation {
     display: flex;
     flex-wrap: wrap;
@@ -144,4 +141,23 @@ main h1 {
 
 .hide-info:hover {
     background-color: #f62681;
+}
+
+#platform a, #genre a{
+    padding: 3px 25px;
+    text-transform: uppercase;
+    background: #f62681;
+    color: white;
+    margin: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.hidden{
+    display: none;
+}
+
+#platform a:hover, #platform a:focus , #genre a:hover, #genre a:focus{
+    background: #038eff;
+    text-decoration: underline;
 }

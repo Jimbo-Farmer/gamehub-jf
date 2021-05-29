@@ -55,20 +55,12 @@ header {
 .description {
     text-align: center;
     text-transform: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     clear: left;
 }
 
 .description p {
     margin: 5px 0 10px 0;
-}
-
-
-.colour-fade {
-    width: 100%;
-    height: 20px;
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgb(255, 74, 195) 100%);
-    margin-bottom: 10px;
 }
 
 main {
@@ -77,17 +69,11 @@ main {
     position: relative;
 }
 
-
-
 main h1 {
     font-family: "ArialRounded", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     font-size: 1.5rem;
 }
-
-      
-
-
 
 #search-button {
     width: 100%;
@@ -203,6 +189,16 @@ a.here{
 .checkout-success a {
     color: #87FBFF;
 }
+footer {
+    position: relative;
+}
+
+#font {
+    font-size: 0.6rem;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
 
 /* ---------------------Accessibility------------------------- */
 
@@ -250,19 +246,26 @@ a.here{
     border: 2px solid #f62681;
 }
 
+input:focus {
+    border-bottom: 2px solid #f62681;
+}
+
 
 /* ------------------------------------------------------------ */
 
 /* -------------------------footer---------------------------- */
 
-footer {
-   margin-left: 20px; 
+.quick-links p {
+    font-weight: bold;
 }
 
-#legal, #contact, #address {
-    margin: 10px 0px;
+.quick-links a{
+    text-decoration: none;
+    color: #038eff;
+    margin-right: 20px;
 }
 
-#legal p, #contact p, #address p {
-    margin: 0;
+.quick-links a:hover, .quick-links a:focus{
+    text-decoration: underline;
+    color: #f62681;
 }

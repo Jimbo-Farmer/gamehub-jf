@@ -27,5 +27,14 @@ if((!isNaN(basketQty) && basketQty > 0)){
 };
 
 
-// login info
+const footer = document.querySelector("footer");
+footer.innerHTML = `<section class="quick-links">
+<div>
+    <p>Quick Links:</p>
+    <a href="index.html">Home</a>
+    <a href="support.html#contact-details">Contact</a>
+    <a href="checkout.html">Checkout</a>
+</div>
+</section>
+<div id="font">Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>`
 
