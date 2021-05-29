@@ -165,6 +165,7 @@ main h1 {
     margin: 10px;
     border-radius: 6px;
     text-decoration: none;
+    display: inline-block;
 }
 
 .hidden{
