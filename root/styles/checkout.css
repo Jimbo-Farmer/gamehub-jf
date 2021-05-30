@@ -102,3 +102,7 @@ label, form p {
 #checkout-submit:hover {
     background-color: darkblue;
 } 
+
+#checkout-submit {
+    -webkit-appearance: none;
+}

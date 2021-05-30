@@ -78,6 +78,7 @@ button {
     -webkit-appearance: none;
 }
 
+
 #search-button {
     width: 100%;
     font-size: 1rem;
@@ -192,9 +193,6 @@ a.here{
 
 .checkout-success a {
     color: #87FBFF;
-}
-footer {
-    position: relative;
 }
 
 #font {
