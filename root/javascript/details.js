@@ -2,12 +2,12 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 console.log(id);
-const url = "http://frontendfarmer.com/CMS%20Noroff/Headless%20CMS/index.php/wp-json/wc/store/products/";
+const url = "https://frontendfarmer.com/CMS%20Noroff/Headless%20CMS/index.php/wp-json/wc/store/products/";
 const container = document.querySelector(".container");
 
 let reviewsHTML;
 async function getReviews(){
-    const response = await fetch("http://frontendfarmer.com/CMS%20Noroff/Headless%20CMS/index.php/wp-json/wp/v2/comments?post="+id);
+    const response = await fetch("https://frontendfarmer.com/CMS%20Noroff/Headless%20CMS/index.php/wp-json/wp/v2/comments?post="+id);
     const results = await response.json();
         reviewsHTML = `<div class="reviews"><h3>Customer Reviews</h3>`;
         console.log(results);

@@ -52,7 +52,7 @@ if (secondary==="platformer"){
 
 
 const featured = document.querySelector(".featured");
-const url = "http://frontendfarmer.com/CMS%20Noroff/Headless%20CMS/index.php/wp-json/wc/store/products";
+const url = "https://frontendfarmer.com/CMS%20Noroff/Headless%20CMS/index.php/wp-json/wc/store/products";
 
 async function getProducts(){
   try{ 

@@ -24,7 +24,7 @@ const featured = document.querySelector(".featured");
 
 // ****New code**** (products from headless cms------------------------------------------------------------------)
 
-const url = "http://frontendfarmer.com/CMS%20Noroff/Headless%20CMS/index.php/wp-json/wc/store/products";
+const url = "https://frontendfarmer.com/CMS%20Noroff/Headless%20CMS/index.php/wp-json/wc/store/products";
 let urlExt = "?featured=true";
 
 
