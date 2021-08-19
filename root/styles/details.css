@@ -1,0 +1,37 @@
+.item-information {
+    position: relative;
+    height: unset;
+    text-align: left;
+    border: none;
+    width: 90%;
+    margin: auto;
+}
+.item-details img {
+    width: 70%;
+    margin: auto;
+    
+}
+
+.item-details {
+    max-width: 600px;
+    text-align: center;
+    border: 1px solid #038eff;
+    border-radius: 6px;
+    padding-top: 5px;
+}
+
+.extra-information {
+    position: relative;
+}
+
+.add-to-cart {
+    width: 80%;
+    margin: 15px auto;
+}
+
+.reviews {
+    background-color: rgb(100, 100, 100);
+    border-radius: 6px;
+    max-width: 600px;
+    padding: 5px 10px;
+}

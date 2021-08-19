@@ -8,7 +8,7 @@ const paymentButton = document.querySelector("#checkout-submit");
 function total(array){
     let sum = 0;
     for(let i = 0; i < array.length; i++){
-        sum += (array[i].price)*(array[i].qty);
+        sum += (array[i].prices.price)*(array[i].inBasket);
         
     }
     return sum;
@@ -31,12 +31,11 @@ if(!shoppingCart){
         for(let i = 0; i < shoppingCart.length; i++){
             summary.innerHTML += `<tr class="item-info">
             <td tabindex="0">${shoppingCart[i].name}</td>
-            <td tabindex="0">${shoppingCart[i].qty}</td>
-            <td tabindex="0">$${shoppingCart[i].price}</td>
-            <td tabindex="0" class="item-total">$${parseInt(shoppingCart[i].price) * shoppingCart[i].qty}</td>
+            <td tabindex="0">${shoppingCart[i].inBasket}</td>
+            <td tabindex="0">$${shoppingCart[i].prices.price}</td>
+            <td tabindex="0" class="item-total">$${parseInt(shoppingCart[i].prices.price) * parseInt(shoppingCart[i].inBasket)}</td>
             </tr>`
-        }
-      
+        }      
     summary.innerHTML +=`<tr>
             <td></td>
             <td></td>
