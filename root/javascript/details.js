@@ -29,11 +29,7 @@ async function getProduct(){
         await getReviews(); 
         const response = await fetch(url+id);
         const output = await response.json();
-        //Draw item on homepage
-        
-        
-
-        
+        //Draw item on homepage        
         container.innerHTML += `<div class="item-details">
         <img src="${output.images[0].src}" alt="${output.name}">
         <div class="item-information extra-info-show">
@@ -48,14 +44,10 @@ async function getProduct(){
         </div>
         `
         
-        
         if(!output.inBasket){
         output.inBasket = 0;
         }
           
-  
-        
-       
         // Add to cart
         const basketQty = JSON.parse(localStorage.getItem("numberOfItems"));
         if((!isNaN(basketQty) && basketQty > 0)){
@@ -152,8 +144,6 @@ async function getProduct(){
               }
           }
         })
-  
-        //Game information display
   
         let items = document.querySelectorAll(".container-item")
   
