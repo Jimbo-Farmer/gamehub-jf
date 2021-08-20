@@ -38,3 +38,16 @@ footer.innerHTML = `<section class="quick-links">
 </section>
 <div id="font">Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>`
 
+// product search
+
+const searchButton = document.querySelector("#search-go");
+const searchInput = document.querySelector("#search-button");
+function runSearch(){
+  location.href = 'results.html?search='+searchInput.value;
+} 
+searchButton.onclick = runSearch;
+searchInput.onkeydown = function(){
+  if(event.key === "Enter"){
+    runSearch();
+  }
+}

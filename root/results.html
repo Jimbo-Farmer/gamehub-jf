@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your profile at GameHub">
+    <meta name="description" content="Visit GameHub to Buy and Sell video games on all platforms">
     <link rel="stylesheet" href="styles/universal.css">
-    <link rel="stylesheet" href="styles/account.css">
+    <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/media.css">
-    <title>GameHub | Account</title>
+    <title>GameHub | Home</title>
 </head>
 <body>
     <header> 
@@ -15,7 +15,7 @@
             <a href="index.html"><img src="icons and logo/logo.png" alt="Logo image of game controller which links to home"></a>
         </div>
         <div class="headline">
-            <a href="index.html"><h2>GameHub</h2></a>
+            <a href="index.html" alt="Headline which links to home"><h2>GameHub</h2></a>
         </div>
         <div class="hamburger"><img src="icons and logo/hamburger-menu.png" alt="hamburger menu"></div>
         <div class="description">
@@ -23,29 +23,28 @@
         </div>
         <div id="search-container">
             <input type="search" placeholder="Search store" id="search-button"><button id="search-go"><img src="icons and logo/search-icon.png" alt=""></button>
-        </div>    
+        </div>   
         <section class="navigation">
-            <a class= "store-home" id="buy" href="index.html">Store Home</a>
+            <a class= "store-home here" id="buy" href="index.html">Store Home</a>
             <a class= "sell" id="sell" href="sell.html">Sell a Game</a>
-            <a class="account here" href="account.html">Account / Signup</a> 
+            <a class="account" href="account.html">Account / Signup</a> 
             <a class="support" href="support.html">Contact & Support</a>           
-            <a class="cart" href="checkout.html">Cart & Checkout <span id="basket"></span></a>                  
+            <a class="cart" href="checkout.html">Cart & Checkout <span id="basket"></span></a>           
         </section>
     </header>
-    <main id="account-main">
-        <div class="page-title">
-            <h1>Your account</h1>
-        </div>
-        <div class="account-container"></div>
+    <main>
+        <section class="featured">
+            <a href="index.html" id="back-home">&lt&lt Store home</a>
+            <h1>Search Results</h1>  
+        </section>
         <div class="mobile-cart-container"></div> 
     </main>
-    
     <footer>
         
-        <div id="font">Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>
     </footer>
   
+
+<script src="javascript/results.js" type="module"></script>
 <script src="javascript/universal.js" type="module"></script>
-<script src="javascript/account.js" type="module"></script>
 </body>
 </html>

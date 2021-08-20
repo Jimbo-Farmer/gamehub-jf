@@ -116,7 +116,7 @@ main h1 {
 
 
 
-.store-navigation a, .details-navigation a{
+.store-navigation a, .details-navigation a, #back-home{
     flex: 1;
     text-align: center;
     margin: 4px 2px;

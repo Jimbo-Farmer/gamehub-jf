@@ -1,7 +1,6 @@
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-console.log(id);
 const url = "https://frontendfarmer.com/CMS%20Noroff/Headless%20CMS/index.php/wp-json/wc/store/products/";
 const container = document.querySelector(".container");
 
@@ -10,7 +9,6 @@ async function getReviews(){
     const response = await fetch("https://frontendfarmer.com/CMS%20Noroff/Headless%20CMS/index.php/wp-json/wp/v2/comments?post="+id);
     const results = await response.json();
         reviewsHTML = `<div class="reviews"><h3>Customer Reviews</h3>`;
-        console.log(results);
         if(results.length === 0){
             reviewsHTML += `<p>No reviews yet</p></div>`
         }

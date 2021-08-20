@@ -97,17 +97,32 @@ button {
     text-align: center;
     position: relative;
 }
-#search-container a{
+#search-container button{
     position: absolute;
     right: 0;
+    display: inline;
 
 }
-#search-container a img {
+#search-container button img {
     height: 20px;
     background-color: #f62681;
     padding: 5px 10px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+#search-go {
+    border: unset;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: unset;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#search-go img:hover {
+    background-color: #87FBFF;
 }
 
 .mobile-cart {
