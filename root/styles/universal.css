@@ -7,7 +7,7 @@
 body {
     margin: 0 auto;
     color: white;
-    background-color: black;
+    background-color: #101010;
     max-width: 2000px;   /* In case of site being viewed on an ultra-wide monitor and trying to stretch the whole 3840 pixels */
     padding-bottom: 45px;
     position: relative;
@@ -67,6 +67,12 @@ main {
     margin-top: 0;
     padding: 20px 5%;
     position: relative;
+    background-color: #101010;
+}
+
+.page {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 main h1 {
@@ -290,4 +296,8 @@ input:focus {
 .quick-links a:hover, .quick-links a:focus{
     text-decoration: underline;
     color: #f62681;
+}
+
+footer {
+    border-top: 2px solid #87FBFF;
 }

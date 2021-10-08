@@ -9,9 +9,6 @@
     h1{
         font-size: 1.5rem;
     }
-    #sell-main{
-        width: 80%;
-    }
     #sell-main label, .extra-label {
         font-size: 1.2rem;  
     }
@@ -112,6 +109,13 @@
 }
 
 @media (min-width: 1200px){
+    #sell-main {
+        display: flex;
+        align-items: center;
+    }
+    .sell-image img{
+        display: unset;
+    }
     #search-container {
         width: 50%;
         margin: 40px 0 0 0;

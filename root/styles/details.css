@@ -18,6 +18,8 @@
     border: 1px solid #038eff;
     border-radius: 6px;
     padding-top: 5px;
+    background-color: black;
+    margin: 16px auto;
 }
 
 .extra-information {
